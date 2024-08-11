@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina la bandera</title>
+    <link rel="stylesheet" href="banderas-1.css">
+</head>
+<body>
+    <h1>ADIVINA LA BANDERA</h1>
+
+    <div id="pantalla-inicial">
+        <p>¿A que pais pertenece la bandera</p>
+        <button class="btn" onclick="comenzarJuego()">Comenzar a jugar</button>
+        <img src="../img/f7.jpg" alt="T-rex" id="panda">
+    </div>
+
+    <div id="pantalla-juego">
+        <img src="img" alt="BANDERAS" id="imgBandera">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra " id="l0">A</div>
+                <div class="nombre " id="n0">OPCION A </div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">OPCION B</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">OPCION C</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pantalla-final">
+        <h2>CORRECTA: <span id="numCorrectas">3</span> </h2>
+        <h2>INCORRECTA: <span id="numIncorrectas">2</span> </h2>
+        <button class="btn" onclick="volverAlInicio()" >Volver a inicio</button>
+    </div>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; Gnosis 2024</p>
+        </div>
+    </footer>
+
+    <script src="main-b1.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

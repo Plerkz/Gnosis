@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../css/styleM.css">
+</head>
+<body>
+    <div id="pantalla-inicial">
+        <h1>MEMORAMA</h1>
+        <button class="btn">Comenzar a jugar</button>
+        <img src="https://i.ibb.co/2FrXfnZ/p12.jpg" alt="panda" id="panda">
+    </div>
+    
+    <div id="pantalla-juego" style="display: none;">
+        <div id="stats">intentos: 0 </div>
+        <div id="wrapper">
+            <div id="game"></div>
+        </div>
+        <div id="contadorPares">
+            Pares encontrados: <span id="paresEncontrados">0</span>
+        </div>
+    </div>
+
+    <script src="../js/mainM.js"></script>
+</body>
+</html>

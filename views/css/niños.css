@@ -1,0 +1,392 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color0: #16063a;
+    --main-color: rgb(247, 210, 4);
+    --main-color2:#d3ad7f;
+    --black:#7b55c2;
+    --black1:#13131a;
+    --bg :#554670;
+    --bg1:#010103;
+    --bg2:#F5F5F5 ;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+html {
+    font-size: 70%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    font-family: 'Roboto', Arial;
+    background-color: rgba(30, 30, 30, 0.89);
+}
+
+section{
+    padding:3rem 2rem;
+    margin: 0 auto;
+    max-width: 1450px;
+}
+
+button {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.contenedor {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento {
+    color: var(--main-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: var(--border);
+    background: var(--bg);
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.header .logo img {
+    height: 5rem;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.9rem;
+    color: #fff;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.nav {
+    --img1: scale(1);
+    --img2: scale(0);
+}
+
+.nav:has(.dropdown:target) {
+    --img1: scale(0);
+    --img2: scale(1);
+
+    --clip: inset(0 0 0 0);
+}
+
+.nav__container {
+    width: 90%;
+    margin: 0 auto;
+    height: 70px;
+
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-areas: "title img";
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.nav__menu {
+    grid-area: img;
+    position: relative;
+    z-index: 10;
+    transform: var(--img1);
+}
+
+.nav__menu--second {
+    transform: var(--img2);
+}
+
+.nav__icon {
+    width: 45px;
+    display: block;
+}
+
+.dropdown {
+    position: fixed;
+    /* Cambiado a fixed para mantener la posición */
+    background-color: #000;
+    width: 75%;
+    max-width: 300px;
+    right: 0;
+    top: 70px;
+    /* Ajustar top para que aparezca debajo del header */
+    padding: 1em;
+
+    display: grid;
+    align-content: center;
+    gap: 1rem;
+
+    overflow-y: auto;
+
+    clip-path: var(--clip, inset(0 0 100% 100%));
+    transition: clip-path 0.5s;
+}
+
+.dropdown__list {
+    list-style: none;
+}
+
+.dropdown__link {
+    font-size: 1.5rem;
+    color: rgb(184, 187, 191);
+    padding: 1em 0.7em;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    position: relative;
+    background-color: var(--bg, transparent);
+    border-radius: 6px;
+}
+
+.dropdown__list:has(:checked) {
+    --rows: 1fr;
+    --rotate: rotate(180deg);
+    --bg: #28303b;
+}
+
+.dropdown__check {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropdown__arrow {
+    margin-left: auto;
+    transform: var(--rotate, 0);
+    transition: 0.2s transform;
+}
+
+.dropdown__content {
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-rows: var(--rows, 0fr);
+    transition: 0.3s grid-template-rows;
+}
+
+.dropdown__sub {
+    overflow: hidden;
+}
+
+.dropdown__li {
+    width: 85%;
+    list-style: none;
+    margin-left: auto;
+}
+
+.dropdown__anchor {
+    padding: 1em 0;
+    display: block;
+    color: #b6babe;
+    text-decoration: none;
+}
+
+/*Fin menú dropdowns*/
+
+/* Estilo para el menú horizontal */
+.menu-categorias {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-categorias .category {
+    font-weight: bold;
+    font-size: 1.25em;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+    color: white;
+    background-color: var(--main-color);
+}
+
+hr{
+    border-color: var(--main-color);
+    border-style: groove
+}
+
+#cuestionarios #text {
+    color: white;
+    margin-top: 0;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Estilo para ocultar las secciones */
+.hidden {
+    display: none;
+}
+
+/* Estilo para las cartas */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+    gap: 20px; /* Espacio entre las cartas */
+}
+
+/* Estilo para las cartas */
+
+.carta {
+    font-size: 2em;
+    color: white;
+    background-position: center center;
+    background-size: cover;
+    margin: 10px; /* Margen entre las cartas */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: calc(25% - 20px); /* Ancho para cuatro cartas por línea con margen */
+}
+
+.carta button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.carta:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/vector-gratis/fondo-abstracto-colorido_23-2148811702.jpg?t=st=1718267331~exp=1718270931~hmac=03dbaad82054d813f742be9b77ad1f1b5bacd9ab86d63a24d5792ffd7a399a87&w=740);
+}
+.carta:nth-child(2) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/fotos-premium/diseno-vector-plano-tecnologia-minima-fondo-contraccion_575980-37671.jpg?w=740);
+}
+
+.carta:nth-child(3) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/foto-gratis/rompecabezas-carton-blanco-piezas-sobre-fondo-turquesa_23-2148207276.jpg?t=st=1718267369~exp=1718270969~hmac=e4056438f31af3e9d3007ffa8ae0d235f16ee6fcce4d4e3f7b00d626484ceda7&w=740);
+}
+
+.carta:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/vector-gratis/crucigrama-ninos-ingles_23-2148786580.jpg?t=st=1718267433~exp=1718271033~hmac=57b8dd075282d943c84668b16e7fb40d81729a35accfadeab2d1457e86232f43&w=740);
+}
+
+.redes-sociales {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+}
+
+.red-social {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.red-social:hover {
+    background-color: var(--main-color);
+}
+
+footer {
+    background-color: rgb(230, 230, 230);
+}
+
+footer p {
+    margin: 0;
+    padding: 12px;
+    color: rgb(85, 85, 85);
+}
+
+footer .contenedor {
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Agrega un estilo específico para pantallas pequeñas */
+@media (max-width: 767px) {
+    .carta {
+        flex: 0 0 calc(50% - 60px); /* Ancho para dos cartas por línea con margen en pantallas pequeñas */
+    }
+}
+
+/* Agrega un estilo específico para pantallas medianas */
+@media (min-width: 768px) {
+    .carta {
+        flex: 0 0 calc(33.33% - 60px); /* Ancho para tres cartas por línea con margen en pantallas medianas */
+    }
+}
+
+/* Agrega un estilo específico para pantallas grandes */
+@media (min-width: 1200px) {
+    .carta {
+        flex: 0 0 calc(25% - 60px); /* Mantén cuatro cartas por línea en pantallas grandes */
+    }
+}

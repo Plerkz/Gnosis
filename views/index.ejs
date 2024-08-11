@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNOSIS</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--Script link-->
+    <script src="js/script.js"></script>
+
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+<header class="header">
+    <section class="flex">
+        <a href="#" class="logo">
+            <img src="img/logo-g.jpg " onclick="inicio()" alt="logo GNOSIS" style="border-radius: 50%;"/>
+        </a>
+
+        <nav class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#caracteristicas">Características</a>
+            <a href="#descripcion">Descripción</a>
+            <a href="#sobre-nosotros">Sobre Nosotros</a>
+            <a href="#mision-vision">Misión-Visión</a>
+            <a href="#desarrolladores">Desarrolladores</a>
+            <a href="#contactanos">Contactanos</a>
+            <a href="#caso-de-uso">Caso de uso</a>
+        </nav>
+
+<!--Menú dropdown-->
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="#menu" class="nav__menu">
+                    <img src="./assets/menu.svg" class="nav__icon" />
+                </a>
+                <a href="#" class="nav__menu nav__menu--second">
+                    <img src="./assets/close.svg" class="nav__icon" />
+                </a>
+                <ul class="dropdown" id="menu">
+                    <li class="dropdown__list">
+                        <a href="#" class="dropdown__link">
+                            <img src="./assets/house.svg" class="dropdown__icon" />
+                            <span class="dropdown__span">Inicio</span>
+                        </a>
+                    </li>
+
+                    <li class="dropdown__list">
+                        <a href="#" class="dropdown__link">
+                            <img src="assets/projects.svg" class="dropdown__icon" />
+                            <span class="dropdown__span">Niños</span>
+                            <img src="./assets/down.svg" class="dropdown__arrow" />
+                            <input type="checkbox" class="dropdown__check" />
+                        </a>
+                        <div class="dropdown__content">
+                            <ul class="dropdown__sub">
+                                <li class="dropdown__li">
+                                    <% if (name) {%>
+                                        <a href="#" onclick="niños()" class="dropdown__anchor">Niños 1</a>
+                                        <%} else {%>
+                                        <a href="#" onclick="login()" class="dropdown__anchor">Niños 1</a>
+                                        <% } %>
+                                </li>
+                                <li class="dropdown__li">
+                                    <% if (name) {%>
+                                        <a href="#" onclick="niños()" class="dropdown__anchor">Niños 2</a>
+                                        <%} else {%>
+                                        <a href="#" onclick="login()" class="dropdown__anchor">Niños 2</a>
+                                        <% } %>
+                                </li>
+                                <li class="dropdown__li">
+                                    <% if (name) {%>
+                                        <a href="#" onclick="niños()" class="dropdown__anchor">Niños 3</a>
+                                        <%} else {%>
+                                        <a href="#" onclick="login()" class="dropdown__anchor">Niños 3</a>
+                                        <% } %>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="dropdown__list">
+                        <a href="#" class="dropdown__link">
+                            <img src="./assets/projects.svg" class="dropdown__icon" />
+                            <span class="dropdown__span">Área personal</span>
+                            <img src="./assets/down.svg" class="dropdown__arrow" />
+                            <input type="checkbox" class="dropdown__check" />
+                        </a>
+                        <div class="dropdown__content">
+                            <ul class="dropdown__sub">
+                                <li class="dropdown__li">
+                                    <a href="cursos.html" class="dropdown__anchor">Área personal 1</a>
+                                </li>
+                                <li class="dropdown__li">
+                                    <a href="cursos.html" class="dropdown__anchor">Área personal 2</a>
+                                </li>
+                                <li class="dropdown__li">
+                                    <a href="cursos.html" class="dropdown__anchor">Área personal 3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li class="dropdown__list">
+                        <a href="#" class="dropdown__link">
+                            <img src="./assets/projects.svg" class="dropdown__icon" />
+                            <span class="dropdown__span">Cuestionarios</span>
+                            <img src="./assets/down.svg" class="dropdown__arrow" />
+                            <input type="checkbox" class="dropdown__check" />
+                        </a>
+                        <div class="dropdown__content">
+                            <ul class="dropdown__sub">
+                                <li class="dropdown__li">
+                                    <% if (name) {%>
+                                    <a href="#" onclick="cuestionario()" class="dropdown__anchor">Cuestionarios 1</a>
+                                    <%} else {%>
+                                    <a href="#" onclick="login()" class="dropdown__anchor">Cuestionarios 1</a>
+                                    <% } %>
+                                </li>
+                                <li class="dropdown__li">
+                                    <% if (name) {%>
+                                        <a href="#" onclick="cuestionario()" class="dropdown__anchor">Cuestionarios 2</a>
+                                        <%} else {%>
+                                        <a href="#" onclick="login()" class="dropdown__anchor">Cuestionarios 2</a>
+                                        <% } %>
+                                </li>
+                                <li class="dropdown__li">
+                                    <% if (name) {%>
+                                        <a href="#" onclick="cuestionario()" class="dropdown__anchor">Cuestionarios 3</a>
+                                        <%} else {%>
+                                        <a href="#" onclick="login()" class="dropdown__anchor">Cuestionarios 3</a>
+                                        <% } %>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+</header>
+
+<!--BANNER-->
+<div class="home-container">
+    <section class="home" id="home">
+        <div class="content">
+            <h3>GNOSIS</h3>
+            <p>Desbloquea una nueva forma de aprendizaje.</p>
+            <a href="#" class="btn">¡Vamos!</a>
+        </div>
+    </section>
+</div>
+
+<!--CARACTERÍSTICAS-->
+<section class="caracteristicas" id="caracteristicas">
+    <div class="contenedor">
+        <h1 class="heading"> <span>Nuestras</span> Características </h1>
+        <div class="contenedor0">
+            <ul class="lista-carac">
+                <li><i class="fas fa-check"></i> Contenido atractivo y diverso: Ofrece cursos, cuestionarios, acertijos y juegos interactivos para todas las edades y niveles educativos.</li>
+                <li><i class="fas fa-check"></i> Aprendizaje lúdico: Combina el aprendizaje con el entretenimiento para que los estudiantes se diviertan mientras aprenden.</li>
+                <li><i class="fas fa-check"></i> Amplia gama de temas: Cubre desde materias básicas hasta áreas como astronomía, idiomas y cultura general.</li>
+                <li><i class="fas fa-check"></i> Recursos multimedia: Incorpora imágenes, videos y sonidos para enriquecer la experiencia de aprendizaje.</li>
+                <li><i class="fas fa-check"></i> Diseño amigable e intuitivo: La interfaz de Gnosis es fácil de usar y navegar, para que puedas encontrar lo que buscas sin problemas.</li>
+            </ul>
+            <div id="imgC">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--DESCRIPCIÓN-->
+<section class="descripcion" id="descripcion">
+    <div class="contenedor">
+        <h1 class="heading"> <span> Nuestra </span> Descripción </h1>
+        <div class="contenedor1">
+            <p>Gnosis es una plataforma educativa integral diseñada para que estudiantes de primera infancia hasta bachillerato puedan aprender sobre diferentes áreas de una manera divertida y efectiva. Ofrece una amplia variedad de recursos, incluyendo cursos, cuestionarios, acertijos y juegos interactivos, que están cuidadosamente diseñados para estimular el aprendizaje y el desarrollo cognitivo de los niños y jóvenes.</p>
+            <div id="imgD">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE NOSOTROS  -->
+<section class="about" id="sobre-nosotros">
+    <div class="contenedor2">
+        <h1 class="heading"> <span>Sobre</span> Nosotros </h1>
+    <div class="row">
+        <div class="image">
+            <img src="img/f7.jpg" alt="Imagen">
+            </div>
+            <div class="content">
+                <h3>¿Quienes somos?</h3>
+                <p>Somos un equipo de apasionados por la educación que creemos en el poder del aprendizaje lúdico. Gnosis nació con el objetivo de crear una plataforma educativa que hiciera del aprendizaje una experiencia divertida y atractiva para estudiantes de todas las edades.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--MISIÓN-VISIÓN-->
+<section class="mision-vision" id="mision-vision">
+    <div class="contenedor">
+        <h1 class="heading"> <span>Misión</span> Visión </h1>
+        <div class="contenedor3">
+            <!-- Misión -->
+            <div class="texto" id="mision">
+                <h3>Misión:</h3>
+
+                <p>Brindar a los estudiantes de primera infancia hasta bachillerato una plataforma educativa integral que les permita aprender sobre diferentes áreas de una manera divertida, efectiva y accesible.</p>
+                <div id="imgM">
+    
+                </div>
+            </div>
+            <!--VISIÓN-->
+            <div class="texto" id="vision">
+                <h3>Visión:</h3>
+                <p>Convertirnos en la plataforma educativa líder para estudiantes de primera infancia hasta bachillerato en América Latina, reconocida por la calidad de nuestros contenidos, la innovación de nuestras metodologías y el impacto positivo en el aprendizaje de los estudiantes.</p>
+                <div id="imgV">
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DESARROLLADORES  -->
+<section class="review" id="desarrolladores">
+    <h1 class="heading"> <span>Nuestros</span> Desarrolladores </h1>
+    <div class="box-container">
+        <div class="box">
+            <br>
+            <img src="img/f7.jpg" class="user" alt="">
+            <h3>Luis Martínez</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <div class="box">
+            <br>
+            <img src="img/f7.jpg" class="user" alt="">
+            <h3>Francisco Hernández</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        
+        <div class="box">
+            <br>
+            <img src="img/f7.jpg" class="user" alt="">
+            <h3>Pavel Pérez</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <br>
+            <img src="img/f7.jpg" class="user" alt="">
+            <h3>Gerald Barrera</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <br>
+            <img src="img/f7.jpg" class="user" alt="" id="">
+            <h3>Gnosis</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <br>
+            <img src="img/f7.jpg" class="user" alt="">
+            <h3>Erick Arias</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTANOS  -->
+<section class="contact" id="contactanos">
+    <h1 class="heading"> <span>Contactanos</span> Ahora </h1>
+    <div class="row">
+        <div id="map">
+            
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1696.0806291494182!2d-89.18190374670867!3d13.803877280240677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f633bef15ed222f%3A0x6328d1cb15f7fa7a!2sInstituto%20Nacional%20de%20Apopa!5e0!3m2!1ses-419!2ssv!4v1711836924838!5m2!1ses-419!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        <form action="">
+            <h3>Llena el formulario</h3>
+            <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input type="text" placeholder="Nombre">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-phone"></span>
+                <input type="text" placeholder="Escribe aquí">
+            </div>
+            <input type="submit" value="Contactar" class="btn">
+        </form>
+    </div>
+</section>
+
+<!--CASO DE USO  -->
+<section class="caso-de-uso" id="caso-de-uso">
+    <h1 class="heading"> <span>Caso d</span>e Uso </h1>
+    <div class="contenedor4">
+        <h3>Imagina que estás en casa y te sientes aburrido. Quieres aprender algo nuevo, pero no sabes por dónde empezar. Con Gnosis, solo necesitas abrir la aplicación y seguir estos pasos:</h3>
+        <ul>
+            <li>
+                <i class="fa-solid fa-fire"></i>  Explora los diferentes temas: Descubre una amplia variedad de cursos, cuestionarios y juegos interactivos sobre diversos temas, desde materias básicas hasta astronomía, idiomas y cultura general.
+            </li>
+            <li>
+                <i class="fa-solid fa-fire"></i>  Elige tu nivel: Selecciona el nivel de dificultad que mejor se adapte a tus conocimientos y habilidades.
+            </li>
+            <li>
+                <i class="fa-solid fa-fire"></i>  Aprende con recursos multimedia: Disfruta de videos, animaciones, imágenes y sonidos que enriquecen tu experiencia de aprendizaje.
+            </li>
+            <li>
+                <i class="fa-solid fa-fire"></i> Pon a prueba tus conocimientos: Completa cuestionarios y acertijos para evaluar tu progreso y reforzar tu aprendizaje.
+            </li>
+            <li>
+                <i class="fa-solid fa-fire"></i>Diviértete mientras aprendes: Gnosis combina el aprendizaje con el entretenimiento para que te diviertas mientras descubres nuevas cosas.
+            </li>
+            <li>
+                <i class="fa-solid fa-fire"></i>Aprende a tu ritmo: Accede a Gnosis desde cualquier lugar y en cualquier momento, y aprende a tu propio ritmo.
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- FOOTER  -->
+<section class="footer">
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+    </div>
+    <div class="credit">creado por <span>GNOSIS</span> | todos los derechos recervados</div>
+</section>
+
+<!-- custom js file link  -->
+<script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+    ({key: "AIzaSyDXZMTklRdqfeWAgqCInoj1cLKigjOE9ls", v: "beta"});</script>
+<script>
+    function cuestionario() {
+        window.location.href = "/cuestionarios";
+    }
+
+    function login() {
+        window.location.href = "/login";
+    }
+
+    function niños() {
+        window.location.href = "/ninos";
+    }
+</script>
+</body>
+</html>

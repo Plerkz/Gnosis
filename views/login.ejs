@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="form-content">
+        <h1><div id="tittle">Inicio de sesión</div></h1>
+        <form action="/loginuser" method="post">
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Correo" name="email">
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Contraseña" name="password">
+                </div>
+                <div>
+                    <p>¿Aún no tienes cuenta? <label onclick="signup()">Click aquí</label></p>
+                </div>
+            </div>
+            <div class="btn-field">
+                <button id="signIn" type="submit">Iniciar Sesión</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function signup() {
+        // Redirige a la página de inicio de sesión
+        window.location.href = "/signup"; // Cambia "/login" a la ruta que deseas
+    }
+</script>
+</body>
+</html>
+
+
+
+
+

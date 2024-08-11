@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Mochiy+Pop+One&display=swap);
+*{
+    box-sizing: border-box;
+    font-family: 'Mochiy Pop One', Arial;
+}
+body {
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient( 0deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1))
+    ,url(https://img.freepik.com/vector-premium/fondo-navidad-dibujado-mano_23-2148702027.jpg?size=626&ext=jpg&ga=GA1.1.308693638.1678943928&semt=ais)center / cover no-repeat;
+}
+
+#wrapper {
+    display: none; /* Oculta el juego al inicio */
+}
+
+/* Pantalla incial */
+#pantalla-inicial{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+
+#pantalla-inicial img {
+    display: block; /* Para que se comporte como un bloque y podamos alinear horizontalmente */
+    margin: 0 auto; /* Centrar horizontalmente */
+    max-width: 25%; 
+    border-radius: 50%;
+}
+
+#pantalla-inicial{
+    margin: 60px 0;
+}
+
+#pantalla-inicial h1{
+    font-size: 3rem;
+    width: fit-content;
+    background-color: white;
+    margin: 40px auto;
+    border-radius: 60px;
+    box-shadow: 5px 5px 0 blueviolet;
+    padding: 20px 30px;
+}
+
+.btn{
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .5s;
+    margin-bottom: 1rem;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+#pantalla-final {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+#wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#game{
+    height: 100vh;
+    max-height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#stats{
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 5px;
+    position: fixed;
+    color: black;
+    font-size: 2rem;
+    top:  1rem;
+    right: 6rem;
+}
+
+#contadorPares {
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 5px;
+    position: fixed;
+    color: black;
+    font-size: 2rem;
+    top:  1rem;
+    left: 6rem;
+}
+
+.card {
+    width: 100px;
+    height: 140px;
+    margin: 1rem;
+    position: relative;
+    transition: transform 0.5s; /* Cambia la propiedad de transición */
+    transform-style: preserve-3d;
+}
+
+.card.active {
+    transform: rotateY(180deg); /* Cambia la rotación al dar vuelta las cartas */
+    transition: transform 0.5s; /* Puedes ajustar la duración de la rotación */
+}
+
+.card div{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    pointer-events: none;
+}
+
+.card .face {
+    background: url('../img-b/d1.jpg') center / cover no-repeat;
+    background-color: rgb(147, 41, 247);
+    border: 3.5px solid darkred;
+    box-shadow: 2px 2px 10px rgb(168, 0, 0);
+    transform: rotateY(180deg);
+    color: darkred; /* Cambia el color del texto a blanco */
+    font-size: 6rem;
+}
+
+.card .back{
+    background: url('../img-b/t1.jpg') center / cover no-repeat;
+    border: 3.5px solid darkgreen;
+    box-shadow: 2px 2px 10px rgb(0, 121, 0);
+}
