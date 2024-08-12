@@ -121,128 +121,76 @@ li, i, p{text-align: justify;}
     padding-bottom: 0.5rem;
 }
 
-.nav {
-    --img1: scale(1);
-    --img2: scale(0);
-}
-
-.nav:has(.dropdown:target) {
-    --img1: scale(0);
-    --img2: scale(1);
-
-    --clip: inset(0 0 0 0);
-}
-
-.nav__container {
-    width: 90%;
-    margin: 0 auto;
-    height: 70px;
-
-    display: grid;
-    grid-template-columns: max-content max-content;
-    grid-template-areas: "title img";
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-}
-
-.nav__menu {
-    grid-area: img;
-    position: relative;
-    z-index: 10;
-    transform: var(--img1);
-}
-
-.nav__menu--second {
-    transform: var(--img2);
-}
-
-.nav__icon {
-    width: 45px;
-    display: block;
-}
-
-.dropdown {
-    position: fixed;
-    /* Cambiado a fixed para mantener la posición */
-    background-color: #000;
-    width: 75%;
-    max-width: 300px;
-    right: 0;
-    top: 70px;
-    /* Ajustar top para que aparezca debajo del header */
-    padding: 1em;
-
-    display: grid;
-    align-content: center;
-    gap: 1rem;
-
-    overflow-y: auto;
-
-    clip-path: var(--clip, inset(0 0 100% 100%));
-    transition: clip-path 0.5s;
-}
-
-.dropdown__list {
-    list-style: none;
-}
-
-.dropdown__link {
-    font-size: 1.5rem;
-    color: rgb(184, 187, 191);
-    padding: 1em 0.7em;
-    text-decoration: none;
-
+/*Inicio del espacio del perfil*/
+.borde .profile{
     display: flex;
-    align-items: center;
-    gap: 0.6rem;
-
-    position: relative;
-    background-color: var(--bg, transparent);
-    border-radius: 6px;
+    flex-direction: row;
+    color: #fff;
+    background:var(--main-color0);
+    justify-content: space-between;
+    gap:1rem;
+    padding: 5rem;
 }
 
-.dropdown__list:has(:checked) {
-    --rows: 1fr;
-    --rotate: rotate(180deg);
-    --bg: #28303b;
+/*Inicio de la seccion quiz-note*/
+.borde1{
+    background-color: #13131a
+}
+.borde1 .board{
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    background:var(--main-color2);
+    padding: 1rem;
 }
 
-.dropdown__check {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
+.board .add{
+    width: 60%;
+}
+
+.board .notes{
+    width: 40%;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    );
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.borde1 .board i{
+    color: black;
+;
+}
+
+.carta {
+    font-size: 2em;
+    color: white;
+    background-position: center center;
+    background-size: cover;
+    margin: 10px; /* Margen entre las cartas */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: calc(25% - 20px); /* Ancho para cuatro cartas por línea con margen */
+}
+
+.carta button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: var(--main-color);
     cursor: pointer;
 }
 
-.dropdown__arrow {
-    margin-left: auto;
-    transform: var(--rotate, 0);
-    transition: 0.2s transform;
+.carta:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/vector-gratis/fondo-abstracto-colorido_23-2148811702.jpg?t=st=1718267331~exp=1718270931~hmac=03dbaad82054d813f742be9b77ad1f1b5bacd9ab86d63a24d5792ffd7a399a87&w=740);
 }
-
-.dropdown__content {
-    font-size: 1.5rem;
-    display: grid;
-    grid-template-rows: var(--rows, 0fr);
-    transition: 0.3s grid-template-rows;
-}
-
-.dropdown__sub {
-    overflow: hidden;
-}
-
-.dropdown__li {
-    width: 85%;
-    list-style: none;
-    margin-left: auto;
-}
-
-.dropdown__anchor {
-    padding: 1em 0;
-    display: block;
-    color: #b6babe;
-    text-decoration: none;
-}
-/*Fin menú dropdowns*/
