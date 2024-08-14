@@ -141,15 +141,22 @@ li, i, p{text-align: justify;}
     flex-direction: row;
     color: #fff;
     background:var(--main-color2);
-    padding: 1rem;
+    padding: 1px;
 }
 
 .board .add{
-    width: 60%;
+    width: 65%;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    );
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .board .notes{
-    width: 40%;
+    width: 35%;
     background-image: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.5),
@@ -174,23 +181,4 @@ li, i, p{text-align: justify;}
     border-radius: 10px;
     text-align: center;
     min-width: calc(25% - 20px); /* Ancho para cuatro cartas por línea con margen */
-}
-
-.carta button{
-    font-size: 1em;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    color: white;
-    background-color: var(--main-color);
-    cursor: pointer;
-}
-
-.carta:first-child {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-    ), url(https://img.freepik.com/vector-gratis/fondo-abstracto-colorido_23-2148811702.jpg?t=st=1718267331~exp=1718270931~hmac=03dbaad82054d813f742be9b77ad1f1b5bacd9ab86d63a24d5792ffd7a399a87&w=740);
 }
