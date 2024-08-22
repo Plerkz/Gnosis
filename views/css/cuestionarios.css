@@ -3,12 +3,14 @@
 }
 
 :root{
-    --main-color0: #16063a;
-    --main-color: rgb(247, 210, 4);
-    --main-color2:#d3ad7f;
-    --black:#7b55c2;
+    --main-color2: blueviolet;
+    --main-color:#f3c081;
+    --main-color1:#FF5733;
+    --black:#13131a;
+    --bg:#010103;
+    --main-color0: #f3f3f3;
+    --main-color3:#d3ad7f;
     --black1:#13131a;
-    --bg :#554670;
     --bg1:#010103;
     --bg2:#F5F5F5 ;
     --border:.1rem solid rgba(255,255,255,.3);

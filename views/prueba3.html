@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz Combinada</title>
+    <link rel="stylesheet" href="css/prueba.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="#" class="logo">
+                <img src="img/logo-g.jpg" onclick="inicio()" alt="logo GNOSIS" style="border-radius: 50%;" />
+            </a>
+
+            <nav class="navbar">
+                <a href="index">Inicio</a>
+                <a href="ninos">Niños</a>
+                <a href="cuestionarios">Cuestionarios</a>
+                <a href="#">Espacio personal</a>
+            </nav>
+        </section>
+    </header>
+
+    <div class="main-container">
+        <div class="categories-container">
+            <div class="categories">
+                <div class="card add-card">
+                    <button class="add-btn" onclick="window.location.href='pruebasGithub.html'"><i class="fa-solid fa-plus"></i></button>
+                    <p>Agregar más</p>
+                </div>
+                <div class="card">
+                    <h2>Banderas</h2>
+                    <button class="btn">Empezar</button>
+                </div>
+                <div class="card">
+                    <h2>Programación</h2>
+                    <button class="btn">Empezar</button>
+                </div>
+                <div class="card">
+                    <h2>Pinturas</h2>
+                    <button class="btn">Empezar</button>
+                </div>
+                <div class="card">
+                    <h2>Mitología</h2>
+                    <button class="btn">Empezar</button>
+                </div>
+                <div class="card">
+                    <h2>Artistas</h2>
+                    <button class="btn">Empezar</button>
+                </div>
+                <div class="card">
+                    <h2>Música</h2>
+                    <button class="btn">Empezar</button>
+                </div>
+            </div>
+        </div>
+        <div class="notes-container">
+            <div class="item" id="add-note">
+                <div class="item-content">
+                    <span class="item-icon">📝</span>
+                    <span>Agregar Nota</span>
+                </div>
+                <span class="chevron">+</span>
+            </div>
+            <div id="notes-container"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; GNOSIS 2024</p>
+        </div>
+    </footer>
+
+    <script src="js/espacio.js"></script>
+</body>
+
+</html>
