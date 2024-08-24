@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identifica la profesión</title>
+    <link rel="stylesheet" href="css/niños-5.css">
+    <script src="js/main-n5.js"></script>
+</head>
+<body>
+    <h1>IDENTIFICA LA PROFESIÓN</h1>
+
+    <div id="pantalla-inicial">
+        <p>¿A QUÉ PROFESIÓN PERTENECE LA IMAGEN?</p>
+        <button class="btn" onclick="comenzarJuego()">Comenzar a jugar</button>
+    </div>
+
+    <div id="pantalla-juego">
+        <img src="img.jpg" alt="PROFESIONES" id="imgProfesiones">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">OPCIÓN A</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">OPCIÓN B</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">OPCIÓN C</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pantalla-final">
+        <h2>CORRECTAS: <span id="numCorrectas">3</span></h2>
+        <h2>INCORRECTAS: <span id="numIncorrectas">2</span></h2>
+        <button class="btn" onclick="volverAlInicio()">Volver a inicio</button>
+    </div>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; Gnosis 2024</p>
+        </div>
+    </footer>
+
+</body>
+</html>

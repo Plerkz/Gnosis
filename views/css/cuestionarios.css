@@ -4,8 +4,8 @@
 
 :root{
     --main-color2: blueviolet;
-    --main-color:#f3c081;
-    --main-color1:#FF5733;
+    --main-color1:#f3c081;
+    --main-color:#FF5733;
     --black:#13131a;
     --bg:#010103;
     --main-color0: #f3f3f3;
@@ -40,6 +40,8 @@ body {
     font-family: 'Roboto', Arial;
     background-color: rgba(30, 30, 30, 0.89);
 }
+
+a{text-decoration: none;}
 
 section{
     padding:3rem 2rem;

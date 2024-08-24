@@ -3,13 +3,13 @@
 }
 
 :root{
-    --main-color1: blueviolet;
-    --main-color:#f3c081;
-    --main-color2:#FF5733;
+    --main-color2: blueviolet;
+    --main-color1:#f3c081;
+    --main-color:#FF5733;
     --black:#13131a;
     --bg:#010103;
     --main-color0: #f3f3f3;
-    --main-color2:#d3ad7f;
+    --main-color3:#d3ad7f;
     --black1:#13131a;
     --bg1:#010103;
     --bg2:#F5F5F5 ;
@@ -40,6 +40,8 @@ body {
     font-family: 'Roboto', Arial;
     background-color: rgba(30, 30, 30, 0.89);
 }
+
+a{text-decoration: none;}
 
 section{
     padding:3rem 2rem;
@@ -86,12 +88,12 @@ button:hover {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .header .logo img {
-    height: 5rem;
+    height: 6rem;
 }
 
 .header .navbar a {
@@ -305,7 +307,7 @@ hr{
         0deg,
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-    ), url(https://img.freepik.com/vector-gratis/fondo-abstracto-colorido_23-2148811702.jpg?t=st=1718267331~exp=1718270931~hmac=03dbaad82054d813f742be9b77ad1f1b5bacd9ab86d63a24d5792ffd7a399a87&w=740);
+    ), url(https://img.freepik.com/vector-gratis/calendario-adviento-festivo-diseno-plano_23-2148359360.jpg?t=st=1724394592~exp=1724398192~hmac=89e785892997c8affad4a23fc2414060153c29ec892ed0624bdfbd2d11203ae9&w=740);
 }
 .carta:nth-child(2) {
     background-image: linear-gradient(
@@ -320,7 +322,7 @@ hr{
         0deg,
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-    ), url(https://img.freepik.com/foto-gratis/rompecabezas-carton-blanco-piezas-sobre-fondo-turquesa_23-2148207276.jpg?t=st=1718267369~exp=1718270969~hmac=e4056438f31af3e9d3007ffa8ae0d235f16ee6fcce4d4e3f7b00d626484ceda7&w=740);
+    ), url(https://img.freepik.com/vector-gratis/crucigrama-ninos-ingles_23-2148786580.jpg?t=st=1718267433~exp=1718271033~hmac=57b8dd075282d943c84668b16e7fb40d81729a35accfadeab2d1457e86232f43&w=740);
 }
 
 .carta:nth-child(4){
@@ -328,7 +330,35 @@ hr{
         0deg,
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-    ), url(https://img.freepik.com/vector-gratis/crucigrama-ninos-ingles_23-2148786580.jpg?t=st=1718267433~exp=1718271033~hmac=57b8dd075282d943c84668b16e7fb40d81729a35accfadeab2d1457e86232f43&w=740);
+    ), url(https://img.freepik.com/vector-premium/animales-selva-marco_123727-28.jpg?w=740);
+}
+.carta:nth-child(5){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/fotos-premium/bus-aislado-icono-3d-personaje-dibujos-animados-lindo_1120306-7135.jpg?w=740);
+}
+.carta:nth-child(6){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/vector-premium/nueve-avatares-dibujos-animados-diferentes-peinados-trajes_1280751-42337.jpg?w=740);
+}
+.carta:nth-child(7){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/vector-premium/diseno-fondo-plano-dia-mundial-vegetarianos_1264005-1448.jpg?w=740);
+}
+.carta:nth-child(8){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/vector-gratis/articulos-tecnologia-gravedad_23-2148072052.jpg?t=st=1724393467~exp=1724397067~hmac=b0c84a386b82aa829fa1c411c47b6ddb2beebedba7f8baf06bf6ed5df08a048a&w=740);
 }
 
 .redes-sociales {
