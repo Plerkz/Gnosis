@@ -34,7 +34,7 @@ async function seleccionarOpcion(index) {
             text: "La respuesta ha sido correcta",
             icon: "success"
         });
-        puntaje += 10; // Ahora cada respuesta correcta vale 10 puntos
+        puntaje++;
     } else {
         await Swal.fire({
             title: "Respuesta incorrecta",
@@ -44,10 +44,9 @@ async function seleccionarOpcion(index) {
     }
     indice_pregunta++;
     if (indice_pregunta >= baseDePreguntas.length) {
-        let notaFinal = (puntaje / (baseDePreguntas.length * 10)) * 10; // Calcula la nota final sobre 10
         await Swal.fire({
             title: "Juego terminado",
-            text: `Tu nota final es: ${notaFinal.toFixed(2)}/10`, // Muestra la nota final con dos decimales
+            text: `Tu puntaje fue de: ${puntaje}/${baseDePreguntas.length}`,
         });
         indice_pregunta = 0;
         puntaje = 0;
@@ -59,7 +58,7 @@ function ayuda() {
     Swal.fire({
         title: "Ayuda",
         text: objetoPregunta.ayuda,
-        imageUrl: objetoPregunta.ayudaImg,
+        imageUrl: objetoPregunta.imgAyuda,
         imageHeight: 250,
     });
 }

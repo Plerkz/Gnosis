@@ -259,10 +259,9 @@ hr{
 
 #cuestionarios #text {
     color: white;
-    margin-top: 0;
+    margin-top: 3.5%;
     font-size: 3em;
     text-align: center;
-    margin-top: 1rem;
 }
 
 /* Estilo para ocultar las secciones */
@@ -387,6 +386,7 @@ hr{
 }
 
 footer {
+    margin-top: 1%;
     background-color: rgb(230, 230, 230);
 }
 
@@ -397,7 +397,7 @@ footer p {
 }
 
 footer .contenedor {
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: flex-end;
 }

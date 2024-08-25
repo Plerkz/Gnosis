@@ -99,7 +99,7 @@ document.getElementById('mostrarSweetAlert-1').addEventListener('click', functio
                         window.open('carpetas/carpetaN/memorama.html', '_blank');
                         break;
                     case 'Difícil':
-                        window.open('carpetas/carpetaN/memorama1.html', '_blank');
+                        window.open('carpetas/carpetaN/memorama0.html', '_blank');
                     break;
                     default:
                         break;
@@ -141,13 +141,13 @@ document.getElementById('mostrarSweetAlert-2').addEventListener('click', functio
             } else {
                 switch (selectedOption) {
                     case 'Fácil':
-                        window.open('carpetas/carpetaN/memorama2.html', '_blank');
+                        window.open('carpetas/carpetaN/memorama1.html', '_blank');
                         break;
                     case 'Normal':
-                        window.open('carpetas/carpetaN/memorama3.html', '_blank');
+                        window.open('carpetas/carpetaN/memorama2.html', '_blank');
                         break;
                     case 'Difícil':
-                        window.open('carpetas/carpetaN/memorama4.html', '_blank');
+                        window.open('carpetas/carpetaN/memorama3.html', '_blank');
                     break;
                     default:
                         break;

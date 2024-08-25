@@ -3,10 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <title>Memorama con Imágenes</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="css/memorama.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Mochiy+Pop+One&display=swap');
+        * {
+            box-sizing: border-box;
+            font-family: 'Mochiy Pop One', Arial, sans-serif;
+        }
+        body {
+            margin: 0;
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                        url(https://img.freepik.com/vector-premium/zoo-selva-animales-aventura-ninos-fondo-safari-animales-lindos-selva-ilustracion_484720-9620.jpg?w=900) center / cover no-repeat;
+        }
+        #pantalla-inicial {
+            display: block;
+            text-align: center;
+            font-size: 30px;
+        }
+        #pantalla-inicial h1 {
+            font-size: 3rem;
+            width: fit-content;
+            background-color: white;
+            margin: 40px auto;
+            border-radius: 60px;
+            box-shadow: 5px 5px 0 blueviolet;
+            padding: 20px 30px;
+        }
+        .btn {
+            font-size: 2rem;
+            font-weight: bold;
+            border: none;
+            background-color: blueviolet;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: .5s;
+            margin-bottom: 1rem;
+        }
+        .btn:hover { transform: scale(1.1); }
+        #pantalla-juego {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        #game {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        #stats, #timer {
+            background-color: white;
+            border-radius: 25px;
+            padding: 5px 15px;
+            color: black;
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .card {
+            width: 100px;
+            height: 140px;
+            position: relative;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .card.active { transform: rotateY(180deg); }
+        .card div {
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            backface-visibility: hidden;
+            pointer-events: none;
+        }
+        .card .face {
+            background-color: rgb(255, 255, 255);
+            border: 3.5px solid darkred;
+            box-shadow: 2px 2px 10px rgb(168, 0, 0);
+            transform: rotateY(180deg);
+        }
+        .card .face img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .card .back {
+            background: url('https://img.freepik.com/vector-premium/animales-selva-africana-leon-cebra-jirafa-tucano-hojas-tropicales-ninos-divertidos-aislados-ilustraciones-acuarela-dibujadas-mano-fiesta-safari-diseno-habitaciones-ducha-bebes-carteles-carteles_627372-2183.jpg?w=360') center / cover no-repeat;
+            border: 3.5px solid darkgreen;
+            box-shadow: 2px 2px 10px rgb(0, 121, 0);
+        }
+        .swal2-popup {
+            font-family: 'Mochiy Pop One', Arial, sans-serif;
+            border-radius: 20px;
+            background-color: rgba(240, 240, 240, 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+        .swal2-title {
+            color: #333;
+            font-size: 2rem;
+        }
+        .swal2-html-container {
+            color: #555;
+            font-size: 1.2rem;
+        }
+        .swal2-confirm, .swal2-cancel {
+            border-radius: 50px !important;
+            font-size: 1.2rem !important;
+            padding: 10px 20px !important;
+        }
+        .swal2-confirm {
+            background-color: #2ecc71 !important;
+        }
+        .swal2-cancel {
+            background-color: #e74c3c !important;
+        }
+    </style>
 </head>
 <body>
     <div id="pantalla-inicial">
@@ -14,16 +142,176 @@
         <button class="btn">Comenzar a jugar</button>
     </div>
     
-    <div id="pantalla-juego" style="display: none;">
-        <div id="stats">intentos: 0 </div>
-        <div id="wrapper">
-            <div id="game"></div>
-        </div>
-        <div id="contadorPares">
-            Pares encontrados: <span id="paresEncontrados">0</span>
-        </div>
+    <div id="pantalla-juego">
+        <div id="timer">Tiempo: 02:00</div>
+        <div id="stats">Intentos: 0</div>
+        <div id="game"></div>
     </div>
 
-    <script src="js/memorama.js"></script>
+    <script>
+        const totalCards = 12;
+        const availableCards = [
+            'https://img.freepik.com/vector-gratis/ilustracion-icono-vector-dibujos-animados-pie-rinoceronte-lindo-concepto-icono-naturaleza-animal-plano-aislado_138676-7293.jpg?t=st=1724574671~exp=1724578271~hmac=a997959abd116f79ea55705296cf87012823808e8eb474741f38ca504b49a46f&w=740',
+            'https://img.freepik.com/vector-gratis/ilustracion-icono-vector-dibujos-animados-lindo-leon-pie-concepto-icono-naturaleza-animal-aislado-vector-premium-estilo-dibujos-animados-plana_138676-3800.jpg?t=st=1724574779~exp=1724578379~hmac=886501afc1a2702d40416859ea8b5dc06608e20876825de2c5aa23476d001a08&w=740',
+            'https://img.freepik.com/vector-gratis/ejemplo-lindo-icono-vector-historieta-pajaro-aguila-concepto-icono-naturaleza-animal-aislado-vector-premium_138676-7040.jpg?t=st=1724574832~exp=1724578432~hmac=e04dd7edc21fd98dbd942eec39df00b9a8b37cba3ff42d50d673002efdc3dcb0&w=740',
+            'https://img.freepik.com/vector-gratis/icono-vectorial-dibujos-animados-pie-ovejas-lindas-ilustracion-animales-icono-naturaleza-icono-plano-aislado-vector_138676-10960.jpg?t=st=1724574911~exp=1724578511~hmac=3263bf6e9fe5ec6f17ef397b48bc26b6128459daf0e9c309217e7d85fbc7db84&w=740',
+            'https://img.freepik.com/vector-premium/hipopotamo-gafas-sol-lindo-vector_613932-507.jpg?w=740',
+            'https://img.freepik.com/vector-gratis/lindo-mono-que-sostiene-palo-negocio-dibujos-animados-icono-vectorial-ilustracion-negocio-animales-aislado-plano_138676-12339.jpg?t=st=1724575191~exp=1724578791~hmac=9133d69b1234b588d53a7d5e0cbb0eb5ad3734b1fa7c006039f799ef2ad0abbf&w=740'
+        ];
+        let cards = [];
+        let selectedCards = [];
+        let currentMove = 0;
+        let currentAttempts = 0;
+        let timeLeft = 120; // 2 minutes in seconds
+        let timerInterval;
+
+        function activate(e) {
+            if (currentMove < 2 && !e.target.classList.contains('active')) {
+                e.target.classList.add('active');
+                selectedCards.push(e.target);
+
+                if (++currentMove === 2) {
+                    currentAttempts++;
+                    updateStats();
+
+                    if (selectedCards[0].querySelector('.face img').src === selectedCards[1].querySelector('.face img').src) {
+                        selectedCards = [];
+                        currentMove = 0;
+
+                        if (document.querySelectorAll('.card.active').length === totalCards) {
+                            clearInterval(timerInterval);
+                            setTimeout(checkWin, 500);
+                        }
+                    } else {
+                        setTimeout(() => {
+                            selectedCards.forEach(card => card.classList.remove('active'));
+                            selectedCards = [];
+                            currentMove = 0;
+                        }, 1000);
+                    }
+                }
+            }
+        }
+
+        function updateStats() {
+            document.getElementById('stats').textContent = `Intentos: ${currentAttempts}`;
+        }
+
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = `Tiempo: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft === 0) {
+                clearInterval(timerInterval);
+                showGameOver();
+            } else {
+                timeLeft--;
+            }
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function createCard(imageUrl) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="back"></div>
+                <div class="face"><img src="${imageUrl}" alt="Card Image"></div>
+            `;
+            card.addEventListener('click', activate);
+            return card;
+        }
+
+        function initializeGame() {
+            const gameBoard = document.getElementById('game');
+            gameBoard.innerHTML = '';
+            cards = [];
+            selectedCards = [];
+            currentMove = 0;
+            currentAttempts = 0;
+            timeLeft = 120;
+
+            clearInterval(timerInterval);
+            timerInterval = setInterval(updateTimer, 1000);
+
+            const cardPairs = availableCards.slice(0, totalCards / 2);
+            const allCards = [...cardPairs, ...cardPairs];
+            shuffleArray(allCards);
+
+            allCards.forEach(imageUrl => {
+                const card = createCard(imageUrl);
+                cards.push(card);
+                gameBoard.appendChild(card);
+            });
+
+            updateStats();
+            updateTimer();
+
+            setTimeout(() => {
+                cards.forEach(card => card.classList.add('active'));
+                setTimeout(() => cards.forEach(card => card.classList.remove('active')), 3000);
+            }, 500);
+        }
+
+        function checkWin() {
+            Swal.fire({
+                title: '¡Felicidades!',
+                html: `Has completado el juego en <br><strong>${currentAttempts} intentos</strong> y <strong>${120 - timeLeft} segundos</strong>.`,
+                icon: 'success',
+                showCancelButton: true,
+                confirmButtonText: 'Jugar de nuevo',
+                cancelButtonText: 'Salir',
+                customClass: {
+                    popup: 'swal2-popup',
+                    title: 'swal2-title',
+                    htmlContainer: 'swal2-html-container',
+                    confirmButton: 'swal2-confirm',
+                    cancelButton: 'swal2-cancel'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    initializeGame();
+                } else {
+                    window.close();
+                }
+            });
+        }
+
+        function showGameOver() {
+            Swal.fire({
+                title: '¡Se acabó el tiempo!',
+                text: 'Lamentablemente, se te ha agotado el tiempo.',
+                icon: 'error',
+                showCancelButton: true,
+                confirmButtonText: 'Volver a Intentar',
+                cancelButtonText: 'Salir',
+                customClass: {
+                    popup: 'swal2-popup',
+                    title: 'swal2-title',
+                    htmlContainer: 'swal2-html-container',
+                    confirmButton: 'swal2-confirm',
+                    cancelButton: 'swal2-cancel'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    initializeGame();
+                } else {
+                    window.close();
+                }
+            });
+        }
+
+        document.querySelector('.btn').addEventListener('click', () => {
+            document.getElementById('pantalla-inicial').style.display = 'none';
+            document.getElementById('pantalla-juego').style.display = 'flex';
+            initializeGame();
+        });
+    </script>
 </body>
 </html>
