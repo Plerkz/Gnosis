@@ -15,7 +15,7 @@
         body {
             margin: 0;
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-                        url(https://img.freepik.com/vector-premium/zoo-selva-animales-aventura-ninos-fondo-safari-animales-lindos-selva-ilustracion_484720-9621.jpg?w=900) center / cover no-repeat;
+                        url(https://img.freepik.com/vector-premium/zoo-selva-animales-aventura-ninos-fondo-safari-animales-lindos-selva-ilustracion_484720-9612.jpg?w=900) center / cover no-repeat;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -147,13 +147,13 @@
             <div class="word-list">
                 <h2>Palabras</h2>
                 <ul>
-                    <li>1. MURCIELAGO</li>
-                    <li>2. ORUGA</li>
-                    <li>3. GATO</li>
-                    <li>4. OSO</li>
-                    <li>5. TORTUGA</li>
-                    <li>6. ZORRO</li>
-                    <li>7. LORO</li>
+                    <li>1. TIGRE</li>
+                    <li>2. JIRAFA</li>
+                    <li>3. FOCA</li>
+                    <li>4. MARIPOSA</li>
+                    <li>5. LOBO</li>
+                    <li>6. GORILA</li>
+                    <li>7. VACA</li>
                 </ul>
             </div>
         </div>
@@ -227,14 +227,14 @@
         function disableUnwantedCells() {
             const cellsToDisable = [
                 // Celdas deshabilitadas (todas excepto las que forman parte de las palabras)
-                {row: 0, col: 0},{row: 0, col: 1}, {row: 0, col: 3}, {row: 0, col: 4}, {row: 0, col: 5}, {row: 0, col: 6}, {row: 0, col: 7},
-                {row: 0, col: 8}, {row: 0, col: 10}, {row: 0, col: 11}, {row: 0, col: 12}, {row: 0, col: 13},
-                {row: 1, col: 10}, {row: 1, col: 11}, {row: 1, col: 12}, {row: 1, col: 13},
-                {row: 2, col: 0}, {row: 2, col: 1}, {row: 2, col: 3}, {row: 2, col: 4}, {row: 2, col: 5}, {row: 2, col: 6}, {row: 2, col: 7}, {row: 2, col: 8}, {row: 2, col: 10}, {row: 2, col: 11}, {row: 2, col: 12}, {row: 2, col: 13},
-                {row: 3, col: 0}, {row: 3, col: 1}, {row: 3, col: 3}, {row: 3, col: 4}, {row: 3, col: 5}, {row: 3, col: 6}, {row: 3, col: 7}, {row: 3, col: 8}, {row: 3, col: 10}, {row: 3, col: 11}, {row: 3, col: 12}, {row: 3, col: 13},
-                {row: 4, col: 0}, {row: 4, col: 5}, {row: 4, col: 6}, {row: 4, col: 7}, {row: 4, col: 12}, {row: 4, col: 13},
-                {row: 5, col: 0}, {row: 5, col: 1}, {row: 5, col: 2}, {row: 5, col: 3}, {row: 5, col: 5}, {row: 5, col: 6}, {row: 5, col: 7}, {row: 5, col: 8}, {row: 5, col: 9}, {row: 5, col: 10}, {row: 5, col: 11}, {row: 5, col: 12}, {row: 5, col: 13},
-                {row: 6, col: 0}, {row: 6, col: 1}, {row: 6, col: 2}, {row: 6, col: 10}, {row: 6, col: 11}, {row: 6, col: 12}, {row: 6, col: 13},
+                {row: 0, col: 0}, {row: 0, col: 2}, {row: 0, col: 3}, {row: 0, col: 4}, {row: 0, col: 5}, {row: 0, col: 6}, {row: 0, col: 7},
+                {row: 0, col: 8}, {row: 0, col: 9}, {row: 0, col: 10}, {row: 0, col: 11}, {row: 0, col: 12}, {row: 0, col: 13},
+                {row: 1, col: 6}, {row: 1, col: 7}, {row: 1, col: 9}, {row: 1, col: 10}, {row: 1, col: 11}, {row: 1, col: 13},
+                {row: 2, col: 0}, {row: 2, col: 2}, {row: 2, col: 3}, {row: 2, col: 5}, {row: 2, col: 6}, {row: 2, col: 13},
+                {row: 3, col: 0}, {row: 3, col: 2}, {row: 3, col: 3}, {row: 3, col: 5}, {row: 3, col: 6}, {row: 3, col: 7}, {row: 3, col: 9}, {row: 3, col: 10}, {row: 3, col: 11}, {row: 3, col: 13},
+                {row: 4, col: 0}, {row: 4, col: 2}, {row: 4, col: 11}, {row: 4, col: 13},
+                {row: 5, col: 0}, {row: 5, col: 1}, {row: 5, col: 2}, {row: 5, col: 3}, {row: 5, col: 4}, {row: 5, col: 5}, {row: 5, col: 6}, {row: 5, col: 7}, {row: 5, col: 8}, {row: 5, col: 9}, {row: 5, col: 10}, {row: 5, col: 11}, {row: 5, col: 12}, {row: 5, col: 13},
+                {row: 6, col: 0}, {row: 6, col: 1}, {row: 6, col: 2}, {row: 6, col: 3}, {row: 6, col: 4}, {row: 6, col: 5}, {row: 6, col: 6}, {row: 6, col: 7}, {row: 6, col: 8}, {row: 6, col: 9}, {row: 6, col: 10}, {row: 6, col: 11}, {row: 6, col: 12}, {row: 6, col: 13},
                 {row: 7, col: 0}, {row: 7, col: 1}, {row: 7, col: 2}, {row: 7, col: 3}, {row: 7, col: 4}, {row: 7, col: 5}, {row: 7, col: 6}, {row: 7, col: 7}, {row: 7, col: 8}, {row: 7, col: 9}, {row: 7, col: 10}, {row: 7, col: 11}, {row: 7, col: 12}, {row: 7, col: 13}
             ];
 
@@ -247,13 +247,13 @@
             });
 
             const staticLetters = {
-                0: [' ', ' ', 'O', ' ', ' ', ' ', ' ', ' ', ' ', 'Z', ' ', ' ', ' ', ' '],
-                1: ['M', ' ', ' ', ' ', ' ', 'E', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-                2: [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+                0: [' ', 'T', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+                1: ['J', ' ', ' ', ' ', 'F', ' ', ' ', ' ', 'L', ' ', ' ', ' ', 'V', ' '],
+                2: [' ', ' ', ' ', ' ', ' ', ' ', ' ', 'G', ' ', ' ', ' ', ' ', ' ', ' '],
                 3: [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-                4: [' ', 'G', ' ', ' ', 'O', ' ', ' ', ' ', 'L', ' ', ' ', 'O', ' ', ' '],
+                4: [' ', ' ', ' ', 'M', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
                 5: [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-                6: [' ', ' ', ' ', 'T', ' ', ' ', ' ', ' ', ' ', 'A', ' ', ' ', ' ', ' '],
+                6: [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
                 7: [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
             };
 
@@ -278,30 +278,30 @@
         disableUnwantedCells();
 
         const letrasEsperadas = {
-            '1-1': 'U',
+            '1-1': 'I',
             '1-2': 'R',
-            '1-3': 'C',
-            '1-4': 'I',
-            '1-6': 'L',
-            '1-7': 'A',
-            '1-8': 'G',
-            '1-9': 'O',
-            '2-2': 'U',
+            '1-3': 'A',
+            '1-5': 'A',
+            '2-1': 'G',
+            '2-4': 'O',
+            '2-8': 'O',
             '2-9': 'R',
-            '3-2': 'G',
-            '3-9': 'R',
-            '4-1': 'G',
-            '4-2': 'A',
-            '4-3': 'T',
-            '4-9': 'O',
-            '4-10': 'R',
-            '4-11': 'O',
-            '5-4': 'S',
-            '6-4': 'O',
-            '6-5': 'R',
-            '6-6': 'T',
-            '6-7': 'U',
-            '6-8': 'G',
+            '2-10': 'I',
+            '2-11': 'L',
+            '2-12': 'A',
+            '3-1': 'R',
+            '3-4': 'C',
+            '3-8': 'B',
+            '3-12': 'C',
+            '4-1': 'E',
+            '4-4': 'A',
+            '4-5': 'R',
+            '4-6': 'I',
+            '4-7': 'P',
+            '4-8': 'O',
+            '4-9': 'S',
+            '4-10': 'A',
+            '4-12': 'A',
         };
 
         function compareLetters() {
