@@ -18,7 +18,12 @@ controller.renderSingup = (req, res) => {
 }
 
 controller.renderCuestionarios = (req, res)=> {
-    res.render('cuestionarios');
+    if (req.session.name){
+        res.render('cuestionarios');
+    } else {
+        res.render('login');
+    }
+    
 }
 
 controller.renderR_invalido = (req, res)=> {
@@ -34,7 +39,12 @@ controller.renderL1_invalido = (req, res)=> {
 }
 
 controller.renderNiños = (req, res) => {
-    res.render('ninos');
+    if (req.session.name) {
+        res.render('ninos');
+    } else {
+        res.render('login')
+    }
+    
 }
 
 controller.renderConexion = (req, res) => {
@@ -42,7 +52,12 @@ controller.renderConexion = (req, res) => {
 }
 
 controller.renderEspacio = (req, res) => {
-    res.render('espacio');
+    if (req.session.name) {
+        res.render('espacio');
+    } else {
+        res.render('login');
+    }
+    
 }
 
 

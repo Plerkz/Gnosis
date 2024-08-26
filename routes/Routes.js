@@ -16,6 +16,7 @@ router.get('/conexion', userController.renderConexion);
 router.get('/espacio', userController.renderEspacio);
 
 
+
 router.post('/adduser', userController.adduser);
 router.post('/loginuser', userController.loginuser);
 
