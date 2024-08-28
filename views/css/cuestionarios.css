@@ -41,6 +41,8 @@ body {
     background-color: rgba(30, 30, 30, 0.89);
 }
 
+h2{font-size: 1rem;}
+
 a{text-decoration: none;}
 
 section{
@@ -237,7 +239,7 @@ button:hover {
 
 /* Estilo para el menú horizontal */
 .menu-categorias {
-    padding-top: 5rem;
+    padding-top: 7.5rem;
     display: flex;
     justify-content: center;
 }
@@ -252,17 +254,16 @@ button:hover {
     background-color: var(--main-color);
 }
 
-hr{
-    border-color: var(--main-color);
-    border-style: groove
+.heading{
+    text-align: center;
+    color: var(--main-color0);
+    text-transform: uppercase;
+    font-size: 1rem;
 }
 
-#cuestionarios #text {
-    color: white;
-    margin-top: 0;
-    font-size: 3em;
-    text-align: center;
-    margin-top: 1rem;
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
 }
 
 /* Estilo para ocultar las secciones */
@@ -295,7 +296,7 @@ hr{
     font-size: 1em;
     font-weight: bold;
     padding: 10px 30px;
-    border-radius: 5px;
+    border-radius: 1rem;
     border: 2px solid rgba(0, 0, 0, 0.5);
     color: white;
     background-color: var(--main-color);
@@ -456,7 +457,11 @@ footer .contenedor {
         font-size: 1.6rem;
     }
 
-    #cuestionarios #text {
+    #cuestionarios .heading {
+        font-size: 4rem;
+    }
+
+    #cuestionarios .heading span {
         font-size: 4rem;
     }
 

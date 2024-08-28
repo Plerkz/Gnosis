@@ -1,0 +1,68 @@
+*{
+    transition: all 0.25s;
+}
+
+body{
+    font-family: Arial;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    background: steelblue;
+    color: white;
+    background-image: url(https://img.freepik.com/vector-gratis/concepto-diseno-espacio-trabajo-laboratorio-biologia_1284-11559.jpg?t=st=1724820955~exp=1724824555~hmac=fa835e8cf9df5995f0d381928f891e196db09765e06dbf029dff677b54456cee&w=740);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+#encabezado{
+    width: 80vw;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 120%;
+}
+
+#encabezado img{
+    width: 90%;
+    height: 100px;
+    object-fit: contain;
+}
+
+.btn{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 6px 20px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(101, 33, 165);
+}
+
+.opcion{
+    width: 80vw;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.opcion:hover{
+    background-color: rgb(101, 33, 165);
+}

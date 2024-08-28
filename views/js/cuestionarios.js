@@ -363,6 +363,1734 @@ document.getElementById('mostrarSweetAlert-6').addEventListener('click', functio
 });
 
 // Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert1').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta1/Ciencias/Ciencias.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta1/Ciencias2/Ciencias.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta1/Ciencias3/Ciencias.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert2').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta1/Lenguaje/Lenguaje.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta1/Lenguaje2/Lenguaje.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta1/Lenguaje3/Lenguaje.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert3').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta1/Sociales/Sociales.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta1/Sociales2/Sociales.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta1/Sociales3/Sociales.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert4').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta1/Matematicas/Matematicas.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta1/Matematicas2/Matematicas.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta1/Matematicas3/Matematicas.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert5').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta2/Ciencias/Ciencias.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta2/Ciencias2/Ciencias.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta2/Ciencias3/Ciencias.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert6').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta2/Lenguaje/Lenguaje.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta2/Lenguaje2/Lenguaje.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta2/Lenguaje3/Lenguaje.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert7').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta2/Sociales/Sociales.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta2/Sociales2/Sociales.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta2/Sociales3/Sociales.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert8').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta2/Matematicas/Matematicas.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta2/Matematicas2/Matematicas.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta2/Matematicas3/Matematicas.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert9').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta3/Ciencias/Ciencias.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta3/Ciencias2/Ciencias.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta3/Ciencias3/Ciencias.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert10').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta3/Lenguaje/Lenguaje.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta3/Lenguaje2/Lenguaje.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta3/Lenguaje3/Lenguaje.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert11').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta3/Sociales/Sociales.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta3/Sociales2/Sociales.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta3/Sociales3/Sociales.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert12').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta3/Matematicas/Matematicas.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta3/Matematicas2/Matematicas.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta3/Matematicas3/Matematicas.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert13').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta4/Ciencias/Ciencias.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta4/Ciencias2/Ciencias.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta4/Ciencias3/Ciencias.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert14').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta4/Lenguaje/Lenguaje.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta4/Lenguaje2/Lenguaje.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta4/Lenguaje3/Lenguaje.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert15').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta4/Sociales/Sociales.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta4/Sociales2/Sociales.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta4/Sociales3/Sociales.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert16').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta4/Matematicas/Matematicas.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta4/Matematicas2/Matematicas.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta4/Matematicas3/Matematicas.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert17').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta5/Ciencias/Ciencias.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta5/Ciencias2/Ciencias.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta5/Ciencias3/Ciencias.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert18').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta5/Lenguaje/Lenguaje.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta5/Lenguaje2/Lenguaje.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta5/Lenguaje3/Lenguaje.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert19').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta5/Sociales/Sociales.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta5/Sociales2/Sociales.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta5/Sociales3/Sociales.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert20').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta5/Matematicas/Matematicas.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta5/Matematicas2/Matematicas.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta5/Matematicas3/Matematicas.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert21').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 6/Ciencias/Ciencias.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 6/Ciencias/Ciencias1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 6/Ciencias/Ciencias2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert22').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 6/Lenguaje/Lenguaje.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 6/Lenguaje/Lenguaje1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 6/Lenguaje/Lenguaje2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+
+                // Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert23').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 6/Sociales/Sociales.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 6/Sociales/Sociales1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 6/Sociales/Sociales2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert24').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 6/Matematicas/Matematicas.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 6/Matematicas/Matematicas1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 6/Matematicas/Matematicas2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert25').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 7/Ciencias/Ciencias.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 7/Ciencias/Ciencias1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 7/Ciencias/Ciencias2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert26').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 7/Lenguaje/Lenguaje.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 7/Lenguaje/Lenguaje1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 7/Lenguaje/Lenguaje2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+
+                // Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert27').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 7/Sociales/Sociales.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 7/Sociales/Sociales1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 7/Sociales/Sociales2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert28').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 7/Matematicas/Matematicas.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 7/Matematicas/Matematicas1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 7/Matematicas/Matematicas2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert29').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 8/Ciencias/Ciencias.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 8/Ciencias/Ciencias1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 8/Ciencias/Ciencias2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert30').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 8/Lenguaje/Lenguaje.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 8/Lenguaje/Lenguaje1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 8/Lenguaje/Lenguaje2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+
+                // Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert31').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 8/Sociales/Sociales.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 8/Sociales/Sociales1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 8/Sociales/Sociales2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert32').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 8/Matematicas/Matematicas.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 8/Matematicas/Matematicas1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 8/Matematicas/Matematicas2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert33').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 9/Ciencias/Ciencias.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 9/Ciencias/Ciencias1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 9/Ciencias/Ciencias2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert34').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 9/Lenguaje/Lenguaje.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 9/Lenguaje/Lenguaje1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 9/Lenguaje/Lenguaje2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+
+                // Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert35').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 8/Sociales/Sociales.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 8/Sociales/Sociales1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 8/Sociales/Sociales2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
+document.getElementById('mostrarSweetAlert36').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que el enlace se abra directamente
+    Swal.fire({
+        title: '¿Qué nivel deseas realizar?',
+        imageUrl: 'https://i.ibb.co/prVXwN5/gif2.gif', // Reemplaza con la URL de la imagen que deseas mostrar
+        imageAlt: 'Imagen personalizada',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
+        cancelButtonColor: '#d33',
+        showCloseButton: true,
+        showLoaderOnConfirm: true,
+        preConfirm: (selectedOption) => {
+            if (!selectedOption) {
+                Swal.showValidationMessage('Debes seleccionar una dificultad'); // Mensaje de error si no selecciona nada
+            } else {
+                switch (selectedOption) {
+                    case 'Fácil':
+                        window.open('carpetas/Carpeta 9/Matematicas/Matematicas.html', '_blank');
+                        break;
+                    case 'Normal':
+                        window.open('carpetas/Carpeta 9/Matematicas/Matematicas1.html', '_blank');
+                        break;
+                    case 'Difícil':
+                        window.open('carpetas/Carpeta 9/Matematicas/Matematicas2.html', '_blank');
+                    break;
+                    default:
+                        break;
+                }
+            }
+        },
+        allowOutsideClick: () => !Swal.isLoading(),
+        input: 'select', // Tipo de input para mostrar las opcionesNormal
+        inputOptions: {
+            'Fácil': 'cuestionario 1',
+            'Normal': 'cuestionario 2',
+            'Difícil': 'cuestionario 3'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales si es necesario al confirmar
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Aquí puedes agregar acciones adicionales si es necesario al cancelar
+        }
+    });
+});
+
+// Código del sweetalert al boton de x cuestionario
 document.getElementById('mostrarSweetAlert37').addEventListener('click', function(event) {
     event.preventDefault(); // Evita que el enlace se abra directamente
     Swal.fire({
@@ -411,7 +2139,7 @@ document.getElementById('mostrarSweetAlert37').addEventListener('click', functio
 });
 
 // Código del sweetalert al boton de x cuestionario
-document.getElementById('mostrarSweetAlert-38').addEventListener('click', function(event) {
+document.getElementById('mostrarSweetAlert38').addEventListener('click', function(event) {
     event.preventDefault(); // Evita que el enlace se abra directamente
     Swal.fire({
         title: '¿Qué nivel deseas realizar?',
@@ -459,7 +2187,7 @@ document.getElementById('mostrarSweetAlert-38').addEventListener('click', functi
 });
 
 // Código del sweetalert al boton de x cuestionario
-document.getElementById('mostrarSweetAlert-39').addEventListener('click', function(event) {
+document.getElementById('mostrarSweetAlert39').addEventListener('click', function(event) {
     event.preventDefault(); // Evita que el enlace se abra directamente
     Swal.fire({
         title: '¿Qué nivel deseas realizar?',
@@ -507,7 +2235,7 @@ document.getElementById('mostrarSweetAlert-39').addEventListener('click', functi
 });
 
 // Código del sweetalert al boton de x cuestionario
-document.getElementById('mostrarSweetAlert-40').addEventListener('click', function(event) {
+document.getElementById('mostrarSweetAlert40').addEventListener('click', function(event) {
     event.preventDefault(); // Evita que el enlace se abra directamente
     Swal.fire({
         title: '¿Qué nivel deseas realizar?',
@@ -555,7 +2283,7 @@ document.getElementById('mostrarSweetAlert-40').addEventListener('click', functi
 });
 
 // Código del sweetalert al boton de x cuestionario
-document.getElementById('mostrarSweetAlert-41').addEventListener('click', function(event) {
+document.getElementById('mostrarSweetAlert41').addEventListener('click', function(event) {
     event.preventDefault(); // Evita que el enlace se abra directamente
     Swal.fire({
         title: '¿Qué nivel deseas realizar?',
@@ -603,7 +2331,7 @@ document.getElementById('mostrarSweetAlert-41').addEventListener('click', functi
 });
 
 // Código del sweetalert al boton de x cuestionario
-document.getElementById('mostrarSweetAlert-42').addEventListener('click', function(event) {
+document.getElementById('mostrarSweetAlert42').addEventListener('click', function(event) {
     event.preventDefault(); // Evita que el enlace se abra directamente
     Swal.fire({
         title: '¿Qué nivel deseas realizar?',
@@ -651,7 +2379,7 @@ document.getElementById('mostrarSweetAlert-42').addEventListener('click', functi
 });
 
 // Código del sweetalert al boton de x cuestionario
-document.getElementById('mostrarSweetAlert-43').addEventListener('click', function(event) {
+document.getElementById('mostrarSweetAlert43').addEventListener('click', function(event) {
     event.preventDefault(); // Evita que el enlace se abra directamente
     Swal.fire({
         title: '¿Qué nivel deseas realizar?',
@@ -699,7 +2427,7 @@ document.getElementById('mostrarSweetAlert-43').addEventListener('click', functi
 });
 
 // Código del sweetalert al boton de x cuestionario
-document.getElementById('mostrarSweetAlert-44').addEventListener('click', function(event) {
+document.getElementById('mostrarSweetAlert44').addEventListener('click', function(event) {
     event.preventDefault(); // Evita que el enlace se abra directamente
     Swal.fire({
         title: '¿Qué nivel deseas realizar?',

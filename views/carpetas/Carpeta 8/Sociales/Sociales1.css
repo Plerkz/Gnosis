@@ -1,0 +1,68 @@
+*{
+    transition: all 0.25s;
+}
+
+body{
+    font-family: Arial;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    background: steelblue;
+    color: white;
+    background-image: url(https://img.freepik.com/foto-gratis/linda-chica-estudiando-geografia-rodeada-literatura-generada-ia_188544-44596.jpg?t=st=1724823920~exp=1724827520~hmac=3099ff1432e82ff6206adbedf4e6e88515be2b07a1fe41d2595b7f1c139d585c&w=740);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+#encabezado{
+    width: 80vw;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 120%;
+}
+
+#encabezado img{
+    width: 90%;
+    height: 100px;
+    object-fit: contain;
+}
+
+.btn{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 6px 20px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(101, 33, 165);
+}
+
+.opcion{
+    width: 80vw;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.opcion:hover{
+    background-color: rgb(101, 33, 165);
+}
