@@ -120,7 +120,7 @@ controller.loginuser = (req, res) => {
                 if (user.pw === pw) {
                     const name = user.name;
                     req.session.name = name;
-                    res.render('cuestionarios');
+                    res.redirect('/espacio');
                 } else {
                     res.render('l-invalido');
                 }
@@ -128,6 +128,21 @@ controller.loginuser = (req, res) => {
         })
     })
 
+}
+
+controller.agregarnota = (req, res) => {
+    const nombrenota = req.body.notename;
+    const content = req.body.content;
+
+    console.log(nombrenota, content);
+    req.getConnection((err, conn) => {
+        conn.query('INSERT INTO notes(note_name, note_content) VALUES(?,?)', [nombrenota, content], (err, results) => {
+            if (err) {
+                console.error('Erro al consultar la base de datos:', err);
+                return res.status(500).send("Error en el servidor");
+            }
+        })
+    })
 }
 
 module.exports = controller;

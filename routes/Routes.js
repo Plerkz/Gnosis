@@ -19,6 +19,7 @@ router.get('/espacio', userController.renderEspacio);
 
 router.post('/adduser', userController.adduser);
 router.post('/loginuser', userController.loginuser);
+router.post('/agregarnota', userController.agregarnota);
 
 
 

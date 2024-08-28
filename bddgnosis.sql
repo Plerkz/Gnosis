@@ -9,4 +9,10 @@ CREATE TABLE IF NOT EXISTS users(
     pw	VARCHAR(20)
 );
 
-SELECT * FROM users;
+CREATE TABLE IF NOT EXISTS notes(
+	noteID INT auto_increment PRIMARY KEY,
+    note_name VARCHAR(30),
+	note_content VARCHAR(500)
+);
+
+SELECT * FROM notes;
