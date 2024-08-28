@@ -250,7 +250,10 @@ li, i, p{text-align: justify;}
 /*Fin menú dropdowns*/
 
 .home-container{
-    background:url(../img/b1.jpg) no-repeat;
+    background: linear-gradient(0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.5)
+    ), url(https://img.freepik.com/fotos-premium/tecnologia-informacion-conceptos-ingenieria-informatica-creacion-software-digital-plataformas-moviles-escritorio-codigo-programacion-desarrollador-software-laptop-neon-codigo-futurista-pantalla_880763-26396.jpg?w=826) no-repeat;
     background-size: cover;
     background-position: center;
 }

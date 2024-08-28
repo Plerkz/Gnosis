@@ -333,13 +333,13 @@ document.getElementById('mostrarSweetAlert-6').addEventListener('click', functio
             } else {
                 switch (selectedOption) {
                     case 'Fácil':
-                        window.open('carpetas/carpeta0/famosos/artistas1.html', '_blank');
+                        window.open('carpetas/carpeta0/famosos/artista1.html', '_blank');
                         break;
                     case 'Normal':
-                        window.open('carpetas/carpeta0/famosos/artistas2.html', '_blank');
+                        window.open('carpetas/carpeta0/famosos/artista2.html', '_blank');
                         break;
                     case 'Difícil':
-                        window.open('carpetas/carpeta0/famosos/artistas3.html', '_blank');
+                        window.open('carpetas/carpeta0/famosos/artista3.html', '_blank');
                     break;
                     default:
                         break;
@@ -363,7 +363,7 @@ document.getElementById('mostrarSweetAlert-6').addEventListener('click', functio
 });
 
 // Código del sweetalert al boton de x cuestionario
-document.getElementById('mostrarSweetAlert-37').addEventListener('click', function(event) {
+document.getElementById('mostrarSweetAlert37').addEventListener('click', function(event) {
     event.preventDefault(); // Evita que el enlace se abra directamente
     Swal.fire({
         title: '¿Qué nivel deseas realizar?',

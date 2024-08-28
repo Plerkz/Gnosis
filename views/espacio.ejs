@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
 <body>
     <header class="header">
         <section class="flex">
             <a href="#" class="logo">
                 <img src="img/logo-g.jpg" onclick="inicio()" alt="logo GNOSIS" style="border-radius: 50%;" />
             </a>
-
             <nav class="navbar">
                 <a href="index">Inicio</a>
                 <a href="ninos">Niños</a>
@@ -28,35 +25,12 @@
 
     <div class="main-container">
         <div class="categories-container">
-            <div class="categories">
+            <div class="categories" id="quizzes-container">
                 <div class="card add-card">
-                    <button class="add-btn" onclick="window.location.href='pruebasGithub.html'"><i class="fa-solid fa-plus"></i></button>
+                    <button class="add-btn" onclick="window.location.href='creador-cuestionarios.html'"><i class="fa-solid fa-plus"></i></button>
                     <p>Agregar más</p>
                 </div>
-                <div class="card">
-                    <h2>Banderas</h2>
-                    <button class="btn">Empezar</button>
-                </div>
-                <div class="card">
-                    <h2>Programación</h2>
-                    <button class="btn">Empezar</button>
-                </div>
-                <div class="card">
-                    <h2>Pinturas</h2>
-                    <button class="btn">Empezar</button>
-                </div>
-                <div class="card">
-                    <h2>Mitología</h2>
-                    <button class="btn">Empezar</button>
-                </div>
-                <div class="card">
-                    <h2>Artistas</h2>
-                    <button class="btn">Empezar</button>
-                </div>
-                <div class="card">
-                    <h2>Música</h2>
-                    <button class="btn">Empezar</button>
-                </div>
+                <!-- Aquí se agregarán dinámicamente las tarjetas de cuestionarios -->
             </div>
         </div>
         <div class="notes-container">
@@ -79,5 +53,4 @@
 
     <script src="js/espacio.js"></script>
 </body>
-
 </html>

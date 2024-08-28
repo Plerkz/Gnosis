@@ -269,25 +269,25 @@ hr{
     display: none;
 }
 
-/* Estilo para las cartas */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
-    gap: 20px; /* Espacio entre las cartas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
 }
 
-/* Estilo para las cartas */
-
 .carta {
-    font-size: 2em;
+    font-size: 2rem;
     color: white;
     background-position: center center;
     background-size: cover;
-    margin: 10px; /* Margen entre las cartas */
-    padding: 20px;
-    border-radius: 10px;
+    padding: 2rem;
+    border-radius: 1rem;
     text-align: center;
-    min-width: calc(25% - 20px); /* Ancho para cuatro cartas por línea con margen */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
 }
 
 .carta button{
@@ -403,22 +403,38 @@ footer .contenedor {
 }
 
 /* Agrega un estilo específico para pantallas pequeñas */
-@media (max-width: 767px) {
-    .carta {
-        flex: 0 0 calc(50% - 60px); /* Ancho para dos cartas por línea con margen en pantallas pequeñas */
-    }
-}
-
-/* Agrega un estilo específico para pantallas medianas */
 @media (min-width: 768px) {
-    .carta {
-        flex: 0 0 calc(33.33% - 60px); /* Ancho para tres cartas por línea con margen en pantallas medianas */
+    .header .navbar {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none !important;
+    }
+
+    .menu-categorias .category {
+        font-size: 1.6rem;
+    }
+
+    #cuestionarios #text {
+        font-size: 4rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
-/* Agrega un estilo específico para pantallas grandes */
-@media (min-width: 1200px) {
-    .carta {
-        flex: 0 0 calc(25% - 60px); /* Mantén cuatro cartas por línea en pantallas grandes */
+@media (min-width: 1024px) {
+    html {
+        font-size: 70%;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

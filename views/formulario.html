@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Programación</title>
+    <style>
+        * {
+            transition: all 0.25s;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            background: steelblue;
+            color: white;
+            background-image: url(https://img.freepik.com/fotos-premium/mesa-escritorio-oficina-computadora_146377-6095.jpg?w=740);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+        }
+        
+        #encabezado {
+            width: 80vw;
+            height: auto;
+            min-height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            font-size: 120%;
+        }
+        
+        #encabezado img {
+            width: 90%;
+            height: 100px;
+            object-fit: contain;
+        }
+        
+        .btn {
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            background-color: blueviolet;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background-color: rgb(101, 33, 165);
+        }
+        
+        .opcion {
+            width: 80vw;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            cursor: pointer;
+        }
+        
+        .opcion:hover {
+            background-color: rgb(101, 33, 165);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <div id="tablero-de-preguntas">
+        <div id="encabezado">
+            <span id="pregunta">Aquí va la pregunta</span>
+        </div>
+
+        <div class="opcion" id="opcion1" onclick="seleccionarOpcion(0)">
+            opcion1
+        </div>
+
+        <div class="opcion" id="opcion2" onclick="seleccionarOpcion(1)">
+            opcion2
+        </div>
+
+        <div class="opcion" id="opcion3" onclick="seleccionarOpcion(2)">
+            opcion3
+        </div>
+
+        <div class="opcion" id="opcion4" onclick="seleccionarOpcion(3)">
+            opcion4
+        </div>
+
+        <button onclick="window.location.href='creador-cuestionarios.html'" class="btn">
+            Volver al Creador
+        </button>
+    </div>
+
+    <script>
+        let baseDePreguntas = JSON.parse(localStorage.getItem('baseDePreguntas')) || [];
+        let indice_pregunta = 0;
+        let puntaje = 0;
+        let opciones = [];
+
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        baseDePreguntas = shuffle(baseDePreguntas);
+
+        function cargarPregunta(index) {
+            if (baseDePreguntas.length === 0) {
+                document.getElementById('tablero-de-preguntas').innerHTML = `
+                    <div id="encabezado">
+                        <span>No hay preguntas guardadas. Por favor, crea algunas preguntas primero.</span>
+                    </div>
+                    <button onclick="window.location.href='creador-cuestionarios.html'" class="btn">
+                        Ir al Creador de Cuestionarios
+                    </button>
+                `;
+                return;
+            }
+
+            objetoPregunta = baseDePreguntas[index];
+            opciones = [...objetoPregunta.distractores, objetoPregunta.respuesta];
+            opciones = shuffle(opciones);
+
+            document.getElementById("pregunta").textContent = objetoPregunta.pregunta;
+            
+            for (let i = 0; i < 4; i++) {
+                document.getElementById(`opcion${i+1}`).textContent = opciones[i];
+            }
+        }
+
+        async function seleccionarOpcion(index) {
+            let opcionSeleccionada = opciones[index];
+            let validezRespuesta = opcionSeleccionada === objetoPregunta.respuesta;
+            if (validezRespuesta) {
+                await Swal.fire({
+                    title: "Respuesta correcta",
+                    text: "La respuesta ha sido correcta",
+                    icon: "success"
+                });
+                puntaje += 10;
+            } else {
+                await Swal.fire({
+                    title: "Respuesta incorrecta",
+                    text: `La respuesta correcta es ${objetoPregunta.respuesta}`,
+                    icon: "error"
+                });
+            }
+            indice_pregunta++;
+            if (indice_pregunta >= baseDePreguntas.length) {
+                let notaFinal = (puntaje / (baseDePreguntas.length * 10)) * 10;
+                await Swal.fire({
+                    title: "Juego terminado",
+                    text: `Tu nota final es: ${notaFinal.toFixed(2)}/10`,
+                });
+                indice_pregunta = 0;
+                puntaje = 0;
+            }
+            cargarPregunta(indice_pregunta);
+        }
+
+        cargarPregunta(0);
+    </script>
+</body>
+</html>

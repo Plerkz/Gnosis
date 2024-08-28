@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cuestionarios</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
@@ -14,7 +14,7 @@
     <header class="header">
         <section class="flex">
             <a href="#" class="logo">
-                <img src="img/logo-g.jpg " onclick="inicio()" alt="logo GNOSIS" style="border-radius: 50%;"/>
+                <img src="img/logo-g.jpg" onclick="inicio()" alt="logo GNOSIS" style="border-radius: 50%;"/>
             </a>
     
             <nav class="navbar">
@@ -28,128 +28,122 @@
                 <a href="index#caso-de-uso">Caso de uso</a>
             </nav>
     
-    <!--Menú dropdown-->
-            <nav class="nav">
-                <div class="nav__container">
-                    <a href="#menu" class="nav__menu">
-                        <img src="./assets/menu.svg" class="nav__icon" />
-                    </a>
-                    <a href="#" class="nav__menu nav__menu--second">
-                        <img src="./assets/close.svg" class="nav__icon" />
-                    </a>
-                    <ul class="dropdown" id="menu">
-                        <li class="dropdown__list">
-                            <a href="index.ejs" class="dropdown__link">
-                                <img src="./assets/house.svg" class="dropdown__icon" />
-                                <span class="dropdown__span">Inicio</span>
-                            </a>
-                        </li>
-    
-                        <li class="dropdown__list">
-                            <a href="index.ejs" class="dropdown__link">
-                                <img src="assets/projects.svg" class="dropdown__icon" />
-                                <span class="dropdown__span">Niños</span>
-                                <img src="./assets/down.svg" class="dropdown__arrow" />
-                                <input type="checkbox" class="dropdown__check" />
-                            </a>
-                            <div class="dropdown__content">
-                                <ul class="dropdown__sub">
-                                    <li class="dropdown__li">
-                                        <a href="#" onclick="ninños()" class="dropdown__anchor">Niños 1</a>
-                                    </li>
-                                    <li class="dropdown__li">
-                                        <a href="#" onclick="niños()" class="dropdown__anchor">Niños 2</a>
-                                    </li>
-                                    <li class="dropdown__li">
-                                        <a href="#" onclick="niños()" class="dropdown__anchor">Niños 3</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-    
-                        <li class="dropdown__list">
-                            <a href="#" class="dropdown__link">
-                                <img src="./assets/projects.svg" class="dropdown__icon" />
-                                <span class="dropdown__span">Cursos</span>
-                                <img src="./assets/down.svg" class="dropdown__arrow" />
-                                <input type="checkbox" class="dropdown__check" />
-                            </a>
-                            <div class="dropdown__content">
-                                <ul class="dropdown__sub">
-                                    <li class="dropdown__li">
-                                        <a href="conexion.html" class="dropdown__anchor">Cursos 1</a>
-                                    </li>
-                                    <li class="dropdown__li">
-                                        <a href="conexion.html" class="dropdown__anchor">Cursos 2</a>
-                                    </li>
-                                    <li class="dropdown__li">
-                                        <a href="conexion.html" class="dropdown__anchor">Cursos 3</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-    
-                        <li class="dropdown__list">
-                            <a href="#" class="dropdown__link">
-                                <img src="./assets/projects.svg" class="dropdown__icon" />
-                                <span class="dropdown__span">Acertijos</span>
-                                <img src="./assets/down.svg" class="dropdown__arrow" />
-                                <input type="checkbox" class="dropdown__check" />
-                            </a>
-                            <div class="dropdown__content">
-                                <ul class="dropdown__sub">
-                                    <li class="dropdown__li">
-                                        <a href="conexion.html" class="dropdown__anchor">Acertijos 1</a>
-                                    </li>
-                                    <li class="dropdown__li">
-                                        <a href="conexion.html" class="dropdown__anchor">Acertijos 2</a>
-                                    </li>
-                                    <li class="dropdown__li">
-                                        <a href="conexion.html" class="dropdown__anchor">Acertijos 3</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-    
-                        <li class="dropdown__list">
-                            <a href="#" class="dropdown__link">
-                                <img src="./assets/projects.svg" class="dropdown__icon" />
-                                <span class="dropdown__span">Cuestionarios</span>
-                                <img src="./assets/down.svg" class="dropdown__arrow" />
-                                <input type="checkbox" class="dropdown__check" />
-                            </a>
-                            <div class="dropdown__content">
-                                <ul class="dropdown__sub">
-                                    <li class="dropdown__li">
-                                        <a href="#" onclick="cuestionario()" class="dropdown__anchor">Cuestionarios 1</a>
-                                    </li>
-                                    <li class="dropdown__li">
-                                        <a href="#" onclick="cuestionario()" class="dropdown__anchor">Cuestionarios 2</a>
-                                    </li>
-                                    <li class="dropdown__li">
-                                        <a href="#" onclick="cuestionario()" class="dropdown__anchor">Cuestionarios 3</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                <!--Menú dropdown-->
+                <nav class="nav">
+                    <div class="nav__container">
+                        <a href="#menu" class="nav__menu">
+                            <img src="./assets/menu.svg" class="nav__icon" />
+                        </a>
+                        <a href="#" class="nav__menu nav__menu--second">
+                            <img src="./assets/close.svg" class="nav__icon" />
+                        </a>
+                        <ul class="dropdown" id="menu">
+                            <li class="dropdown__list">
+                                <a href="index.ejs" class="dropdown__link">
+                                    <img src="./assets/house.svg" class="dropdown__icon" />
+                                    <span class="dropdown__span">Inicio</span>
+                                </a>
+                            </li>
+        
+                            <li class="dropdown__list">
+                                <a href="index.ejs" class="dropdown__link">
+                                    <img src="assets/projects.svg" class="dropdown__icon" />
+                                    <span class="dropdown__span">Niños</span>
+                                    <img src="./assets/down.svg" class="dropdown__arrow" />
+                                    <input type="checkbox" class="dropdown__check" />
+                                </a>
+                                <div class="dropdown__content">
+                                    <ul class="dropdown__sub">
+                                        <li class="dropdown__li">
+                                            <a href="#" onclick="ninños()" class="dropdown__anchor">Niños 1</a>
+                                        </li>
+                                        <li class="dropdown__li">
+                                            <a href="#" onclick="niños()" class="dropdown__anchor">Niños 2</a>
+                                        </li>
+                                        <li class="dropdown__li">
+                                            <a href="#" onclick="niños()" class="dropdown__anchor">Niños 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+        
+                            <li class="dropdown__list">
+                                <a href="#" class="dropdown__link">
+                                    <img src="./assets/projects.svg" class="dropdown__icon" />
+                                    <span class="dropdown__span">Cursos</span>
+                                    <img src="./assets/down.svg" class="dropdown__arrow" />
+                                    <input type="checkbox" class="dropdown__check" />
+                                </a>
+                                <div class="dropdown__content">
+                                    <ul class="dropdown__sub">
+                                        <li class="dropdown__li">
+                                            <a href="conexion.html" class="dropdown__anchor">Cursos 1</a>
+                                        </li>
+                                        <li class="dropdown__li">
+                                            <a href="conexion.html" class="dropdown__anchor">Cursos 2</a>
+                                        </li>
+                                        <li class="dropdown__li">
+                                            <a href="conexion.html" class="dropdown__anchor">Cursos 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+        
+                            <li class="dropdown__list">
+                                <a href="#" class="dropdown__link">
+                                    <img src="./assets/projects.svg" class="dropdown__icon" />
+                                    <span class="dropdown__span">Acertijos</span>
+                                    <img src="./assets/down.svg" class="dropdown__arrow" />
+                                    <input type="checkbox" class="dropdown__check" />
+                                </a>
+                                <div class="dropdown__content">
+                                    <ul class="dropdown__sub">
+                                        <li class="dropdown__li">
+                                            <a href="conexion.html" class="dropdown__anchor">Acertijos 1</a>
+                                        </li>
+                                        <li class="dropdown__li">
+                                            <a href="conexion.html" class="dropdown__anchor">Acertijos 2</a>
+                                        </li>
+                                        <li class="dropdown__li">
+                                            <a href="conexion.html" class="dropdown__anchor">Acertijos 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+        
+                            <li class="dropdown__list">
+                                <a href="#" class="dropdown__link">
+                                    <img src="./assets/projects.svg" class="dropdown__icon" />
+                                    <span class="dropdown__span">Cuestionarios</span>
+                                    <img src="./assets/down.svg" class="dropdown__arrow" />
+                                    <input type="checkbox" class="dropdown__check" />
+                                </a>
+                                <div class="dropdown__content">
+                                    <ul class="dropdown__sub">
+                                        <li class="dropdown__li">
+                                            <a href="#" onclick="cuestionario()" class="dropdown__anchor">Cuestionarios 1</a>
+                                        </li>
+                                        <li class="dropdown__li">
+                                            <a href="#" onclick="cuestionario()" class="dropdown__anchor">Cuestionarios 2</a>
+                                        </li>
+                                        <li class="dropdown__li">
+                                            <a href="#" onclick="cuestionario()" class="dropdown__anchor">Cuestionarios 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+            <div class="menu-btn" id="menuBtn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </section>
     </header>
-    
-        <div class="menu-btn" id="menuBtn">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <nav id="menuNav">
-            <a href="bamboom1.html">Inicio</a>
-            <a href="test.html">Test</a>
-            <a href="niños.html">Niños</a>
-            <a href="#">Cuestionarios</a>
-            <a href="material-apoyo.html">Material de apoyo</a>
-        </nav>
+
 
     <div id="contenedor-general">
         <div class="menu-categorias">
@@ -160,295 +154,293 @@
             <button class="category" id="bachillerato-btn">Bachillerato</button>
         </div>
 
-        <!--<hr>--->
-
-    <div id="cuestionarios">
-        <h2 id="text">Cuestionarios</h2>
-        <div id="General" class="hidden">
-            <div id="Generales" class="grid-container">
-                <div class="carta">
-                    <h3>Banderas</h3>
-                    <button id="mostrarSweetAlert-1">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Programación</h3>
-                    <button id="mostrarSweetAlert-2">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Pinturas</h3>
-                    <button id="mostrarSweetAlert-3">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Astronomía</h3>
-                    <button id="mostrarSweetAlert-4">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Mitología</h3>
-                    <button id="mostrarSweetAlert-5">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Artistas</h3>
-                    <button id="mostrarSweetAlert-6">Empezar</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="primer-ciclo" class="hidden">
-            <h2>Primer Grado</h2>
-            <div id="primer-grado" class="grid-container">
-                <div class="carta">
-                    <h3>Ciencia</h3>
-                    <button id="mostrarSweetAlert1">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Lenguaje</h3>
-                    <button id="mostrarSweetAlert2">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Sociales</h3>
-                    <button id="mostrarSweetAlert3">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Matematica</h3>
-                    <button id="mostrarSweetAlert4">Empezar</button>
+        <div id="cuestionarios">
+            <h2 id="text">Cuestionarios</h2>
+            <div id="General" class="hidden">
+                <div id="Generales" class="grid-container">
+                    <div class="carta">
+                        <h3>Banderas</h3>
+                        <button id="mostrarSweetAlert-1">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Programación</h3>
+                        <button id="mostrarSweetAlert-2">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Pinturas</h3>
+                        <button id="mostrarSweetAlert-3">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Astronomía</h3>
+                        <button id="mostrarSweetAlert-4">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Mitología</h3>
+                        <button id="mostrarSweetAlert-5">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Artistas</h3>
+                        <button id="mostrarSweetAlert-6">Empezar</button>
+                    </div>
                 </div>
             </div>
-        
-            <h2>Segundo Grado</h2>
-            <div id="segundo-grado" class="grid-container">
-                <div class="carta">
-                    <h3>Ciencia</h3>
-                    <button id="mostrarSweetAlert5">Empezar</button>
+    
+            <div id="primer-ciclo" class="hidden">
+                <h2>Primer Grado</h2>
+                <div id="primer-grado" class="grid-container">
+                    <div class="carta">
+                        <h3>Ciencia</h3>
+                        <button id="mostrarSweetAlert1">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Lenguaje</h3>
+                        <button id="mostrarSweetAlert2">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Sociales</h3>
+                        <button id="mostrarSweetAlert3">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Matematica</h3>
+                        <button id="mostrarSweetAlert4">Empezar</button>
+                    </div>
                 </div>
-                <div class="carta">
-                    <h3>Lenguaje</h3>
-                    <button id="mostrarSweetAlert6">Empezar</button>
+            
+                <h2>Segundo Grado</h2>
+                <div id="segundo-grado" class="grid-container">
+                    <div class="carta">
+                        <h3>Ciencia</h3>
+                        <button id="mostrarSweetAlert5">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Lenguaje</h3>
+                        <button id="mostrarSweetAlert6">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Sociales</h3>
+                        <button id="mostrarSweetAlert7">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Matematica</h3>
+                        <button id="mostrarSweetAlert8">Empezar</button>
+                    </div>
                 </div>
-                <div class="carta">
-                    <h3>Sociales</h3>
-                    <button id="mostrarSweetAlert7">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Matematica</h3>
-                    <button id="mostrarSweetAlert8">Empezar</button>
-                </div>
-            </div>
-        
-            <h2>Tercer Grado</h2>
-            <div id="tercer-grado" class="grid-container">
-                <div class="carta">
-                    <h3>Ciencia</h3>
-                    <button id="mostrarSweetAlert9">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Lenguaje</h3>
-                    <button id="mostrarSweetAlert10">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Sociales</h3>
-                    <button id="mostrarSweetAlert11">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Matematica</h3>
-                    <button id="mostrarSweetAlert12">Empezar</button>
-                </div>
-                <!-- Agrega más cartas aquí -->
-            </div>
-        </div>
-
-        <div id="segundo-ciclo" class="hidden">
-            <h2>Cuarto Grado</h2>
-            <div id="cuarto-grado" class="grid-container">
-                <div class="carta">
-                    <h3>Ciencia</h3>
-                    <button id="mostrarSweetAlert13">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Lenguaje</h3>
-                    <button id="mostrarSweetAlert14">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Sociales</h3>
-                    <button id="mostrarSweetAlert15">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Matematica</h3>
-                    <button id="mostrarSweetAlert16">Empezar</button>
-                </div>
-            </div>
-        
-            <h2>Quinto Grado</h2>
-            <div id="quinto-grado" class="grid-container">
-                <div class="carta">
-                    <h3>Ciencia</h3>
-                    <button id="mostrarSweetAlert17">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Lenguaje</h3>
-                    <button id="mostrarSweetAlert18">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Sociales</h3>
-                    <button id="mostrarSweetAlert19">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Matematica</h3>
-                    <button id="mostrarSweetAler20">Empezar</button>
+            
+                <h2>Tercer Grado</h2>
+                <div id="tercer-grado" class="grid-container">
+                    <div class="carta">
+                        <h3>Ciencia</h3>
+                        <button id="mostrarSweetAlert9">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Lenguaje</h3>
+                        <button id="mostrarSweetAlert10">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Sociales</h3>
+                        <button id="mostrarSweetAlert11">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Matematica</h3>
+                        <button id="mostrarSweetAlert12">Empezar</button>
+                    </div>
+                    <!-- Agrega más cartas aquí -->
                 </div>
             </div>
-        
-            <h2>Sexto Grado</h2>
-            <div id="sexto-grado" class="grid-container">
-                <div class="carta">
-                    <h3>Ciencia</h3>
-                    <button id="mostrarSweetAlert21">Empezar</button>
+    
+            <div id="segundo-ciclo" class="hidden">
+                <h2>Cuarto Grado</h2>
+                <div id="cuarto-grado" class="grid-container">
+                    <div class="carta">
+                        <h3>Ciencia</h3>
+                        <button id="mostrarSweetAlert13">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Lenguaje</h3>
+                        <button id="mostrarSweetAlert14">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Sociales</h3>
+                        <button id="mostrarSweetAlert15">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Matematica</h3>
+                        <button id="mostrarSweetAlert16">Empezar</button>
+                    </div>
                 </div>
-                <div class="carta">
-                    <h3>Lenguaje</h3>
-                    <button id="mostrarSweetAlert22">Empezar</button>
+            
+                <h2>Quinto Grado</h2>
+                <div id="quinto-grado" class="grid-container">
+                    <div class="carta">
+                        <h3>Ciencia</h3>
+                        <button id="mostrarSweetAlert17">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Lenguaje</h3>
+                        <button id="mostrarSweetAlert18">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Sociales</h3>
+                        <button id="mostrarSweetAlert19">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Matematica</h3>
+                        <button id="mostrarSweetAler20">Empezar</button>
+                    </div>
                 </div>
-                <div class="carta">
-                    <h3>Sociales</h3>
-                    <button id="mostrarSweetAlert23">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Matematica</h3>
-                    <button id="mostrarSweetAlert24">Empezar</button>
-                </div>
-                <!-- Agrega más cartas aquí -->
-            </div>
-        </div>
-
-        <div id="tercer-ciclo" class="hidden">
-            <h2>Séptimo grado</h2>
-            <div id="séptimo-grado" class="grid-container">
-                <div class="carta">
-                    <h3>Ciencia</h3>
-                    <button id="mostrarSweetAlert25">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Lenguaje</h3>
-                    <button id="mostrarSweetAlert26">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Sociales</h3>
-                    <button id="mostrarSweetAlert27">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Matematica</h3>
-                    <button id="mostrarSweetAlert28">Empezar</button>
-                </div>
-            </div>
-        
-            <h2>Octavo grado</h2>
-            <div id="octavo-grado" class="grid-container">
-                <div class="carta">
-                    <h3>Ciencia</h3>
-                    <button id="mostrarSweetAlert29">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Lenguaje</h3>
-                    <button id="mostrarSweetAlert30">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Sociales</h3>
-                    <button id="mostrarSweetAlert31">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Matematica</h3>
-                    <button id="mostrarSweetAlert32">Empezar</button>
-                </div>
-            </div>
-        
-            <h2>Noveno Grado</h2>
-            <div id="noveno-grado" class="grid-container">
-                <div class="carta">
-                    <h3>Ciencia</h3>
-                    <button id="mostrarSweetAlert33">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Lenguaje</h3>
-                    <button id="mostrarSweetAlert34">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Sociales</h3>
-                    <button id="mostrarSweetAlert35">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Matematica</h3>
-                    <button id="mostrarSweetAlert36">Empezar</button>
-                </div>
-                <!-- Agrega más cartas aquí -->
-            </div>
-        </div>
-
-        <div id="bachillerato" class="hidden">
-            <h2>Primer Año</h2>
-            <div id="primer-año" class="grid-container">
-                <div class="carta">
-                    <h3>Ciencia</h3>
-                    <button id="mostrarSweetAlert37">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Lenguaje</h3>
-                    <button id="mostrarSweetAlert38">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Sociales</h3>
-                    <button id="mostrarSweetAlert39">Empezar</button>
-                </div>
-                <div class="carta">
-                    <h3>Matematica</h3>
-                    <button id="mostrarSweetAlert40">Empezar</button>
+            
+                <h2>Sexto Grado</h2>
+                <div id="sexto-grado" class="grid-container">
+                    <div class="carta">
+                        <h3>Ciencia</h3>
+                        <button id="mostrarSweetAlert21">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Lenguaje</h3>
+                        <button id="mostrarSweetAlert22">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Sociales</h3>
+                        <button id="mostrarSweetAlert23">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Matematica</h3>
+                        <button id="mostrarSweetAlert24">Empezar</button>
+                    </div>
+                    <!-- Agrega más cartas aquí -->
                 </div>
             </div>
-        
-            <h2>Segundo Año</h2>
-            <div id="segundo-año" class="grid-container">
-                <div class="carta">
-                    <h3>Ciencia</h3>
-                    <button id="mostrarSweetAlert41">Empezar</button>
+    
+            <div id="tercer-ciclo" class="hidden">
+                <h2>Séptimo grado</h2>
+                <div id="séptimo-grado" class="grid-container">
+                    <div class="carta">
+                        <h3>Ciencia</h3>
+                        <button id="mostrarSweetAlert25">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Lenguaje</h3>
+                        <button id="mostrarSweetAlert26">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Sociales</h3>
+                        <button id="mostrarSweetAlert27">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Matematica</h3>
+                        <button id="mostrarSweetAlert28">Empezar</button>
+                    </div>
                 </div>
-                <div class="carta">
-                    <h3>Lenguaje</h3>
-                    <button id="mostrarSweetAlert42">Empezar</button>
+            
+                <h2>Octavo grado</h2>
+                <div id="octavo-grado" class="grid-container">
+                    <div class="carta">
+                        <h3>Ciencia</h3>
+                        <button id="mostrarSweetAlert29">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Lenguaje</h3>
+                        <button id="mostrarSweetAlert30">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Sociales</h3>
+                        <button id="mostrarSweetAlert31">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Matematica</h3>
+                        <button id="mostrarSweetAlert32">Empezar</button>
+                    </div>
                 </div>
-                <div class="carta">
-                    <h3>Sociales</h3>
-                    <button id="mostrarSweetAlert43">Empezar</button>
+            
+                <h2>Noveno Grado</h2>
+                <div id="noveno-grado" class="grid-container">
+                    <div class="carta">
+                        <h3>Ciencia</h3>
+                        <button id="mostrarSweetAlert33">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Lenguaje</h3>
+                        <button id="mostrarSweetAlert34">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Sociales</h3>
+                        <button id="mostrarSweetAlert35">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Matematica</h3>
+                        <button id="mostrarSweetAlert36">Empezar</button>
+                    </div>
+                    <!-- Agrega más cartas aquí -->
                 </div>
-                <div class="carta">
-                    <h3>Matematica</h3>
-                    <button id="mostrarSweetAlert44">Empezar</button>
+            </div>
+    
+            <div id="bachillerato" class="hidden">
+                <h2>Primer Año</h2>
+                <div id="primer-año" class="grid-container">
+                    <div class="carta">
+                        <h3>Ciencia</h3>
+                        <button id="mostrarSweetAlert37">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Lenguaje</h3>
+                        <button id="mostrarSweetAlert38">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Sociales</h3>
+                        <button id="mostrarSweetAlert39">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Matematica</h3>
+                        <button id="mostrarSweetAlert40">Empezar</button>
+                    </div>
                 </div>
-                <!-- Agrega más cartas aquí -->
+            
+                <h2>Segundo Año</h2>
+                <div id="segundo-año" class="grid-container">
+                    <div class="carta">
+                        <h3>Ciencia</h3>
+                        <button id="mostrarSweetAlert41">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Lenguaje</h3>
+                        <button id="mostrarSweetAlert42">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Sociales</h3>
+                        <button id="mostrarSweetAlert43">Empezar</button>
+                    </div>
+                    <div class="carta">
+                        <h3>Matematica</h3>
+                        <button id="mostrarSweetAlert44">Empezar</button>
+                    </div>
+                    <!-- Agrega más cartas aquí -->
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="redes-sociales">
-    <a href="https://www.facebook.com/profile.php?id=61550080205874&mibextid=ZbWKwL" target="_blank" class="red-social"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com/Bamboom503?t=QwFRBX1KkhZC79gHySzq1w&s=08" target="_blank" class="red-social"><i class="fa-brands fa-x-twitter"></i></a>
-    <a href="https://instagram.com/bamboom503?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D" target="_blank" class="red-social"><i class="fab fa-instagram"></i></a>
-</div>
+    <div class="redes-sociales">
+        <a href="https://www.facebook.com/profile.php?id=61550080205874&mibextid=ZbWKwL" target="_blank" class="red-social"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/Bamboom503?t=QwFRBX1KkhZC79gHySzq1w&s=08" target="_blank" class="red-social"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/bamboom503?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D" target="_blank" class="red-social"><i class="fab fa-instagram"></i></a>
+    </div>
 
-<footer>
-<div class="contenedor">
-    <p>&copy; GNOSIS 2024</p>
-</div> 
-</footer>
+    <footer>
+        <div class="contenedor">
+            <p>&copy; GNOSIS 2024</p>
+        </div> 
+    </footer>
 
     <script src="js/cuestionarios.js"></script>
     <script>
         function inicio(){
             window.location.href = "/index";
         }
-
+    
         function cuestionario() {
             window.location.href = "/cuestionarios"
         }
-
+    
         function niños() {
             window.location.href = "/ninos"
         }
